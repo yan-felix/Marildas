@@ -4,7 +4,6 @@
     margin: 0;
 }
 
-
 /*Header==================================*/
 header{
     width: 100%;
@@ -54,9 +53,43 @@ header{
 
 }
 
+#marginer{ /* Relativo à <div id="marginer" class="row mb-2">...</div> da página de receitas */
+    margin-top: 1rem;
+}
+
+/*Logos & Linkes=================================*/
+.linkes{
+    text-decoration: none;
+}
+
+#container-social-medias{
+    text-align: center;
+}
+
+.social-media-logo{
+    width: 4rem;
+    height: 2rem;
+    margin: 1rem 0 1rem 0;
+    padding: 0;
+}
+
+#instagram-logo, #twitter-logo, #facebook-logo{
+    width: 50%;
+    height: 100%;
+}
+
+/*Thumbs=============================================*/
+.card-img-top, .card-img-bottom{
+    width: 10rem;
+    height: 30rem;
+}
+
+.card{
+    margin-top: 2.5rem;
+}
 
 
-/*Footer===================================*/
+/*Footer=============================================*/
 footer{
     color: rgb(60, 119, 121);
     text-align: center;
