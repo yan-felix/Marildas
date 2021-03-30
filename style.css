@@ -1,41 +1,109 @@
-/*Geral===================================*/
+/*Ageitar a responsividade depois*/
+
+/*Geral===========================================================================================================*/
+:root{
+    --green:#036614;
+    --dark-grey: #4e4d4d;
+    --light-grey: #969292;
+     
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 
-/*Header==================================*/
+/*Header==========================================================================================================*/
+.container{
+    width: 100%;
+}
+
 header{
     width: 100%;
-    text-align: center;
-    background: #f8f9fa;
 }
 
-#div-logo-header{
+header div.row{
     width: 100%;
-    height: 15rem;
+    text-align: center;
 }
 
-#Logo-Header{
+#container-logo{ /*Nota: ageitar a logo (algumas manchas não foram tiradas completamente na edição).*/
+    width: 20rem;
+    height: 8rem;
+    margin: 1rem 0 -1rem 49.50rem;
+}
+
+.subscribe-link{
+    margin: 0 12rem 0.25rem -51rem;
+}
+
+#container-logo a img{
     width: 100%;
     height: 100%;
-    border-radius: 0.25rem;
 }
 
-/*NavBar=================================*/
-.container-fluid{
-    justify-content: center; /*Ageitar a responsividade desta merda depois*/
+/*NavBar==========================================================================================================*/
+.home-link{
+    margin: 0 0 0 49.55rem;
+    width: 90px;
 }
 
-#Nav-Bar{
-    margin-top: -2rem;
+.community-link{
+    margin: 0 0.25rem 0 0.25rem;
 }
 
-/*Body of the Page====================================*/
-#centre-container{
+.recipes-link{
+    margin: 0;
+
+}
+
+/*Body of the Page================================================================================================*/
+.centre-container{
     text-align: center;
     width: 60%;
     margin-left: 20%;
+}
+
+#left-container{
+    width: 20%;
+    height: 50rem;
+    position: absolute;
+    margin-left: 7%;
+    margin-top: 0rem;
+}
+
+#new-publication{
+    width: 100%;
+    text-align: center;
+}
+
+#new-publication a{
+    margin-bottom: 1rem;
+}
+
+#mambrane-se-logo-marilda{
+    width: 10rem;
+    height: 4rem;
+}
+
+#mambrane-se-logo-marilda img{
+    width: 100%;
+    height: 100%;
+    margin-top: 0.3rem;
+}
+
+#mambrane-se-text{
+    margin-left: 1rem;
+    justify-content: space-around;
+}
+
+#mambrane-se{
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    background: rgb(216, 232, 238);
 }
 
 #most-popular{
@@ -50,16 +118,50 @@ header{
     margin-top: -17.5rem;
     margin-bottom: -2rem;
     border-radius: 0.25rem;
-
 }
 
-#marginer{ /* Relativo à <div id="marginer" class="row mb-2">...</div> da página de receitas */
+#marginer{ /* Relativo à <div id="marginer" class="row mb-2">...</div> da página de Receitas */
     margin-top: 1rem;
 }
 
-/*Logos & Linkes=================================*/
+#title-publication-community{
+    margin-top: 2rem;
+    text-align: left;
+    margin-left: 24%;
+}
+
+.card{
+    width: 50%;
+    margin-left: 24%;
+    text-align: left;
+}
+
+.user-perfil-infomation{
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+}
+
+.container-photo-user{
+    width: 4rem;
+    height: 4rem;
+}
+
+.container-photo-user img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    margin: -0.25rem 0 0.25rem -0.25rem;
+}
+
+/*Logos(Social Medias) & Linkes===================================================================================*/
 .linkes{
     text-decoration: none;
+    color: var(--dark-grey);
+}
+
+.linkes:hover{
+    color: var(--light-grey);
 }
 
 #container-social-medias{
@@ -69,8 +171,10 @@ header{
 .social-media-logo{
     width: 4rem;
     height: 2rem;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 1rem -4rem;
     padding: 0;
+    display: inline-flex;
+    align-items: center;
 }
 
 #instagram-logo, #twitter-logo, #facebook-logo{
@@ -78,7 +182,19 @@ header{
     height: 100%;
 }
 
-/*Thumbs=============================================*/
+#InstaName{
+    margin-left: 1rem;
+}
+
+#TtName{
+    margin-left: 1rem;
+}
+
+#FaceName{
+    margin-left: 1rem;
+}
+
+/*Thumbs==========================================================================================================*/
 .card-img-top, .card-img-bottom{
     width: 10rem;
     height: 30rem;
@@ -88,8 +204,12 @@ header{
     margin-top: 2.5rem;
 }
 
+/*Posts===========================================================================================================*/
+.blog-post-meta{
+    justify-content: left;
+}
 
-/*Footer=============================================*/
+/*Footer==========================================================================================================*/
 footer{
     color: rgb(60, 119, 121);
     text-align: center;

@@ -7,79 +7,114 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Marilda's</title>
         <link rel="stylesheet" href="./style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&amp;display=swap"
-            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&amp;display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-        <header>
-            <div id="div-logo-header">
-                <img id="Logo-Header" src="./assets/assets/Logo-Marildas.png" alt="Logo Marilda's">
+        <div>
+            <header class="blog-header py-3 bg-dark">
+              <div class="row flex-nowrap justify-content-between align-items-center">
+                <div id="container-logo" class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">
+                      <img src="./assets/assets/Logo-Marildas.png" alt="Marilda's">
+                    </a>
+                </div>
+                <div id="search-button" class="col-4 d-flex align-items-center">
+                    <a class="link-secondary" href="#" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+                        viewBox="0 0 24 24">
+                        <title>Pesquisar</title>
+                        <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                        <path d="M21 21l-5.2-5.2"></path>
+                        </svg>
+                    </a>
+                  <a class="linkes btn-outline-secondary btn btn-sm" href="#">Pesquisar</a>
+                </div>
+                <div id="" class="col-4 pt-1 subscribe-link">
+                  <a class="linkes btn-outline-secondary btn btn-sm" href="#">Subscribe</a>
+                </div>
+              </div>
+            </header>
+        
+            <div class="nav-scroller py-1 mb-2">
+              <nav class="nav d-flex navbar-centre">
+                    <a id="" class="nav-link linkes btn-outline-secondary btn btn-sm home-link" aria-current="page" href="./home.html">Home</a>
+                    <a id="" class="nav-link linkes btn-outline-secondary btn btn-sm community-link" href="./community.html">Comunidade</a>
+                    <a id="" class="nav-link linkes btn-outline-secondary btn btn-sm recipes-link" href="./recipes.html">Receitas</a>
+              </nav>
             </div>
-            
-        </header>
+        </div>
+
         <main>
-            <section id="Nav-Bar">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Marilda's</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
-                                </li>
+            <section id="left-container">
+                <div id="new-publication">
+                    <a class="nav-link linkes btn-outline-secondary btn btn-sm" href="#">Fazer Publicação</a>
+                </div>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./community.html">Comunidade</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./recipes.html">Receitas</a>
-                                </li>
-                            </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="O que você procura?"
-                                    aria-label="Barra de Pesquisa">
-                                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                            </form>
-                        </div>
+                <div id="mambrane-se">
+                    <div id="mambrane-se-logo-marilda">
+                        <img src="./assets/assets/logo-marildas.png" alt="Foto da Administradora do Blog">
                     </div>
-                </nav>
+                    <div id="mambrane-se-text">
+                        <h6>
+                            Inscreva-se para fazer parte da nossa comunidade é poder compartilhar suas aventuras gastronômicas conosco!
+                        </h6>
+                    </div>
+                    
+                </div>
             </section>
 
-            <section id="centre-container">
+            <section class="centre-container">
+                  <div id="title-publication-community">
+                    <h5> 
+                      Publicações:
+                    </h5>
+                  </div>
+
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Minha versão da receita de Salmão Cru</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="user-perfil-infomation">
+                            <div class="container-photo-user">
+                                <img src="./assets/assets/kaneki-logo1.png" alt="Foto de perfil">
+                            </div>
+                            <h5 class="user-name-publication">Carlos</h5>
+                        </div>
+                        <h6 class="card-title">Minha versão da receita de Salmão Cru</h6>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                     <img src="./assets/assets/salmao-cru.png" class="card-img-bottom" alt="Publicação de um membro da comunidade">
                   </div>
 
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Minha versão da receita de Camarão com Legumes</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="user-perfil-infomation">
+                            <div class="container-photo-user">
+                                <img src="./assets/assets/Touka-chan_Logo.png" alt="Foto de perfil">
+                            </div>
+                            <h5 class="user-name-publication">Diana</h5>
+                        </div>
+                        <h6 class="card-title">Minha versão da receita de Camarão com Legumes</h6>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                     <img src="./assets/assets/camarao-com-legumes.png" class="card-img-bottom" alt="Publicação de um membro da comunidade">
                   </div>
 
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Minha versão da receita de Filé de Peixe</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="user-perfil-infomation">
+                            <div class="container-photo-user">
+                                <img src="./assets/assets/kaneki-logo2.png" alt="Foto de Perfil">
+                            </div>
+                            <h5 class="user-name-publication">Alex</h5>
+                        </div>
+                        <h6 class="card-title">Minha versão da receita de Filé de Peixe</h6>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                     <img src="./assets/assets/file-de-peixe.png" class="card-img-bottom" alt="Publicação de um membro da comunidade">
                   </div>
