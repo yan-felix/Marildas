@@ -27,10 +27,22 @@ header div.row{
     text-align: center;
 }
 
+.container-nome-blog{
+    width: 10px;
+    height: 40px;
+    margin: 0rem -85rem 0 -40rem;
+    padding: 0;
+}
+
+.container-nome-blog img{
+    width: 20%;
+    height: 100%;
+}
+
 #container-logo{ /*Nota: ageitar a logo (algumas manchas não foram tiradas completamente na edição).*/
     width: 20rem;
     height: 8rem;
-    margin: 1rem 0 -1rem 49.50rem;
+    margin: 0rem 2rem 0rem 52rem;
 }
 
 .subscribe-link{
