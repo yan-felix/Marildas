@@ -15,46 +15,36 @@
 <body>
 
   <div>
-    <header class="blog-header py-3 bg-dark">
-      <div class="row flex-nowrap justify-content-between align-items-center">
-        <div class="container-nome-blog">
-          <img src="./assets/assets/nome-blog.png" alt="Nome do Blog (Marilda's)">
-        </div>
-        <div id="container-logo" class="col-4 text-center">
-          <a class="blog-header-logo text-dark" href="#">
-            <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
-          </a>
-        </div>
-        <div id="search-button" class="col-4 d-flex align-items-center">
-          <a class="link-secondary" href="#" aria-label="Search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-              viewBox="0 0 24 24">
-              <title>Pesquisar</title>
-              <circle cx="10.5" cy="10.5" r="7.5"></circle>
-              <path d="M21 21l-5.2-5.2"></path>
-            </svg>
-          </a>
-          <a class="linkes btn-outline-secondary btn btn-sm" href="#">Pesquisar</a>
-        </div>
-        <div id="" class="col-4 pt-1 subscribe-link">
-          <a class="linkes btn-outline-secondary btn btn-sm" href="#">Inscrever-se</a>
-        </div>
+    <header>
+      <div id="nome-blog-container">
+        <img src="./assets/assets/nome-blog.png" alt="Marildas">
       </div>
-    </header>
-
-    <div class="nav-scroller py-1 mb-2">
-      <nav class="nav d-flex navbar-centre">
-        <a id="" class="nav-link linkes btn-outline-secondary btn btn-sm home-link" aria-current="page" href="./home.html">Home</a>
-        <a id="" class="nav-link linkes btn-outline-secondary btn btn-sm community-link" href="./community.html">Comunidade</a>
-        <a id="" class="nav-link linkes btn-outline-secondary btn btn-sm recipes-link" href="./recipes.html">Receitas</a>
-      </nav>
-    </div>
-  </div>
+  
+      <div id="logo-marildas-container">
+        <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
+      </div>
+  
+      <div id="search-button-container">
+        <button>Pesquisar</button>
+      </div>
+  
+      <div id="subscribe-button-container">
+        <button>Inscrever-se</button>
+      </div>
+  </header>
 
   <main>
     <section class="centre-container">
-      <div id="most-popular" class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div id="narbar-buttons-container">
+        <nav class="nav d-flex navbar-centre">
+          <a id="home-link" class="linkes" aria-current="page" href="./home.html">Receitas</a>
+          <a id="community-link" class="linkes" href="./community.html">Comunidade</a>
+          <a id="bio-link" class="linkes" href="./bio.html">Biografia</a>
+
+        </nav>
+      </div>
+
+      <div id="most-popular" class="p-4 p-md-5 mb-4 text-white rounded">
         <div id="Text-thumb" class="col-md-6 px-0">
           <h1 class="display-4 fst-italic">Salmão Cru</h1>
           <p class="lead my-3">Olá, meu amores! <br> Hoje vim trazer para vocês uma receita deliciosa e prática: uma
@@ -74,44 +64,172 @@
       <div class="row mb-2">
         <div class="col-md-6">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary">Mais Recente</strong>
-              <h3 class="mb-0">Filé de Peixe</h3>
-              <div class="mb-1 text-muted">27/03/2021</div>
-              <p class="card-text mb-auto">Quem não gosta de um filezinho de peixe grelhado não é mesmo?</p>
-              <a href="./recipes.html" class="stretched-link linkes">Continuar lendo</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Filé de Peixe</h3>
+                  <div class="mb-1 text-muted">27/03/2021</div>
+                  <p class="card-text mb-auto">Quem não gosta de um filezinho de peixe grelhado não é mesmo?
+                  </p>
+                  <a href="#" class="stretched-link linkes">Continuar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img thumbs" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
 
-            </div>
+              </div>
           </div>
-        </div>
-        <div class="col-md-6">
+      </div>
+
+      <div class="col-md-6">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-success">Recente</strong>
-              <h3 class="mb-0">Camarão com Legumes</h3>
-              <div class="mb-1 text-muted">25/03/2021</div>
-              <p class="mb-auto">Espero que você não seja alérgico, porque hoje teremos camarão!</p>
-              <a href="./recipes.html" class="stretched-link linkes">Continuar lendo</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
-                aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                  dy=".3em">Thumbnail</text>
-              </svg>
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Camarão com Legumes</h3>
+                  <div class="mb-1 text-muted">25/03/2021</div>
+                  <p class="mb-auto">Espero que você não seja alérgico, porque hoje teremos camarão!</p>
+                  <a href="#" class="stretched-link linkes">Continuar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
 
-            </div>
+              </div>
           </div>
-        </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Salada com Queijo de Cabra </h3>
+                  <div class="mb-1 text-muted">23/03/2021</div>
+                  <p class="mb-auto">Hoje vamos deixar o besterol um pouco de lado, está bem?</p>
+                  <a href="#" class="stretched-link linkes">Continuar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Salada Primavera</h3>
+                  <div class="mb-1 text-muted">21/03/2021</div>
+                  <p class="mb-auto">Hoje vamos dar um sabor mais primaveril a este outono.</p>
+                  <a href="#" class="stretched-link linkes">Continar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Ravióli com Peito de Frango</h3>
+                  <div class="mb-1 text-muted">20/03/2021</div>
+                  <p class="mb-auto">Bom dai! Hoje eu trouxe uma receitinha de ravióle com frango... </p>
+                  <a href="#" class="stretched-link linkes">Continuar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Pudim de Laranja com Calda</h3>
+                  <div class="mb-1 text-muted">18/02/2021</div>
+                  <p class="mb-auto">Doces... o que seria da nossa vida sem eles, não é mesmo?</p>
+                  <a href="#" class="stretched-link linkes">Continuar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Petit Gateau</h3>
+                  <div class="mb-1 text-muted">16/02/2021</div>
+                  <p class="mb-auto">Vamos adoçar o dia hoje com uma sobremesa deliciosa!</p>
+                  <a href="#" class="stretched-link linkes">Continar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">Filé de Peixe com Couve</h3>
+                  <div class="mb-1 text-muted">15/02/2021</div>
+                  <p class="mb-auto">Huumm... que vontade de comer um peixinho!</p>
+                  <a href="#" class="stretched-link linkes">Continuar lendo</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                  <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                          fill="#eceeef" dy=".3em">Thumbnail</text>
+                  </svg>
+
+              </div>
+          </div>
+      </div>
       </div>
 
       <div class="row">
@@ -151,9 +269,8 @@
             <a class="btn btn-outline-primary linkes" href="#">Older</a>
             <a class="btn btn-outline-secondary disabled linkes" href="#" tabindex="-1" aria-disabled="true">Newer</a>
           </nav>
-
-        </div>
-
+        </div>        
+        <!-- Esse trecho a baixo (muito provavelmente) será transferido para a págia da Biografia, senão deletado do projeto -->
         <div class="col-md-4">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Sobre mim</h4>

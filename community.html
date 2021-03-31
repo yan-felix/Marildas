@@ -13,43 +13,23 @@
     </head>
 
     <body>
-        <div>
-            <header class="blog-header py-3 bg-dark">
-              <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="container-nome-blog">
-                    <img src="./assets/assets/nome-blog.png" alt="Nome do Blog (Marilda's)">
-                </div>
-                <div id="container-logo" class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="#">
-                      <img src="./assets/assets/logo-marildas.png" alt="Marilda's">
-                    </a>
-                </div>
-                <div class="col-4 d-flex align-items-center">
-                    <a class="link-secondary" href="#" aria-label="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-                        viewBox="0 0 24 24">
-                        <title>Pesquisar</title>
-                        <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                        <path d="M21 21l-5.2-5.2"></path>
-                        </svg>
-                    </a>
-                    <a class="linkes btn-outline-secondary btn btn-sm" href="#">Pesquisar</a>
-                </div>
-                <div  class="col-4 pt-1 subscribe-link">
-                  <a class="linkes btn-outline-secondary btn btn-sm" href="#">Increver-se</a>
-                </div>
-              </div>
-            </header>
-        
-            <div class="nav-scroller py-1 mb-2">
-              <nav class="nav d-flex navbar-centre">
-                    <a class="nav-link linkes btn-outline-secondary btn btn-sm home-link" aria-current="page" href="./home.html">Home</a>
-                    <a class="nav-link linkes btn-outline-secondary btn btn-sm community-link" href="./community.html">Comunidade</a>
-                    <a class="nav-link linkes btn-outline-secondary btn btn-sm recipes-link" href="./recipes.html">Receitas</a>
-              </nav>
+        <header>
+            <div id="nome-blog-container">
+              <img src="./assets/assets/nome-blog.png" alt="Marildas">
             </div>
-        </div>
+        
+            <div id="logo-marildas-container">
+              <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
+            </div>
+        
+            <div id="search-button-container">
+              <button>Pesquisar</button>
+            </div>
+        
+            <div id="subscribe-button-container">
+              <button>Inscrever-se</button>
+            </div>
+        </header>
 
         <main>
             <section id="left-container">
@@ -66,11 +46,18 @@
                             Inscreva-se para fazer parte da nossa comunidade e poder compartilhar suas aventuras gastronômicas conosco!
                         </h6>
                     </div>
-                    
                 </div>
             </section>
 
             <section class="centre-container">
+                  <div id="narbar-buttons-container">
+                    <nav class="nav d-flex navbar-centre">
+                        <a id="home-link" class="linkes" aria-current="page" href="./home.html">Receitas</a>
+                        <a id="community-link" class="linkes" href="./community.html">Comunidade</a>
+                        <a id="bio-link" class="linkes" href="./bio.html">Biografia</a>
+                    </nav>
+                  </div>
+
                   <div id="title-publication-community">
                     <h5> 
                       Publicações:
@@ -126,6 +113,7 @@
             </section>
 
         </main>
+     
         <footer>
             <h5>Marilda's</h5>
         </footer>
