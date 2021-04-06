@@ -2,10 +2,11 @@
 
 /*Geral===========================================================================================================*/
 :root{
-    --green:#02440d;
+    --green:#1b4b1b;
     --light-green: #09c528;
     --dark-grey: #4e4d4d;
     --light-grey: #969292;
+    --ciane: rgb(195, 235, 207);
      
 }
 
@@ -50,8 +51,9 @@ header{
 }
 
 #search-button-container button:hover{
-    color: black;
+    color: rgb(8, 8, 8);
     background: white;
+    border: 1px solid black;
 }
 
 #subscribe-button-container{
@@ -67,8 +69,9 @@ header{
 }
 
 #subscribe-button-container button:hover{
-    color: black;
+    color: rgb(8, 8, 8);
     background: white;
+    border: 1px solid black;
 }
 
 /*NavBar==========================================================================================================*/
@@ -81,48 +84,73 @@ header{
 
 #home-link{
     margin: 0 1rem 0 0;
-    padding: 0rem 0.5rem 0.1rem 0.5rem;
-    border: 1px solid var(--dark-grey);
+    padding: 0 0.5rem 0 0.5rem;
+    border: 1px solid black;
     border-radius: 0.25rem;
-    color: var(--dark-grey);
+    color: black;
     background: white;
 }
 
 #home-link:hover{
-    color: rgb(253, 251, 251);
-    background: var(--green);
+    color: black;
+    background: var(--ciane);
+    border: 1px solid black;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
 #community-link{
-    margin: 0rem 1rem 0 0;
-    padding: 0rem 0.5rem 0.1rem 0.5rem;
-    border: 1px solid var(--dark-grey);
+    margin: 0 1rem 0 0;
+    padding: 0 0.5rem 0 0.5rem;
+    border: 1px solid black;
     border-radius: 0.25rem;
-    color: var(--dark-grey);
+    color: black;
     background: white;
 }
 
 #community-link:hover{
-    color: rgb(253, 251, 251);
-    background: var(--green);
+    color: black;
+    background: var(--ciane);
+    border: 1px solid black;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
 #bio-link{
-    padding: 0rem 0.5rem 0.1rem 0.5rem;
-    border: 1px solid var(--dark-grey);
+    padding: 0 0.5rem 0 0.5rem;
+    border: 1px solid black;
     border-radius: 0.25rem;
-    color: var(--dark-grey);
+    color: black;
     background: white;
 }
 
 #bio-link:hover{
-    color: rgb(253, 251, 251);
-    background: var(--green);
+    color: black;
+    background: var(--ciane);
+    border: 1px solid black;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
+#home-link-in-that-page{
+    color: black;
+    background: var(--ciane);
+    border: 1px solid black;
+    padding: 0 0.5rem 0 0.5rem;
+}
 
+#community-link-in-that-page{
+    color: black;
+    background: var(--ciane);
+    border: 1px solid black;
+    padding: 0 0.5rem 0 0.5rem;
+}
 
-/*Body of the Page================================================================================================*/
+#bio-link-in-that-page{
+    color: black;
+    background: var(--ciane);
+    border: 1px solid black;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+/*Body of the Page Community================================================================================================*/
 .centre-container{
     text-align: center;
     width: 60%;
@@ -130,63 +158,62 @@ header{
 }
 
 #left-container{
-    width: 20%;
-    height: 50rem;
+    width: 25%;
+    height: 9.5rem;
+    margin-top: 4rem;
+    padding: 0 2rem 0 2rem;
     position: absolute;
-    margin-left: 7%;
+    margin-left: 5%;
     margin-top: 0rem;
+    border: 2px solid rgb(226, 225, 225);
+    border-radius: 1rem 0rem 1rem 1rem;
 }
 
 #new-publication{
-    width: 100%;
+    width: 50%;
     text-align: center;
+    margin-left: 25%;
 }
 
 #new-publication a{
-    margin-bottom: 1rem;
+    color: rgb(128, 125, 125);
+    border: 1px solid rgb(128, 125, 125);
+    border-radius: 0.25rem;
+    padding: 0.5rem 2rem;
 }
 
-#mambrane-se-logo-marilda{
+#new-publication a:hover{ 
+    background: rgb(128, 125, 125);
+    color: white;
+}
+
+#mambrane-se-logo-marilda{ 
     width: 8rem;
     height: 3rem;
 }
 
-#mambrane-se-logo-marilda img{
+#mambrane-se-logo-marilda img{ 
     width: 100%;
     height: 100%;
     margin: 0 1rem 0 0.5rem;
 }
 
-#mambrane-se-text{
+#mambrane-se-text{ 
     margin-left: 1rem;
     justify-content: space-around;
 }
 
-#mambrane-se{
+#mambrane-se-container{ 
     width: 100%;
     height: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     border-radius: 0.5rem;
     display: inline-flex;
     align-items: center;
-    background: rgb(195, 235, 207);
 }
 
-#most-popular{
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    background: var(--green);
-}
-
-#most-popular #image-most-popular img{
-    width: 53%;
-    height: 25rem;
-    margin-left: 50%;
-    margin-top: -17.5rem;
-    margin-bottom: -2rem;
-    border-radius: 0.25rem;
-}
-
-#title-publication-community{
+#title-publication-community{ 
     margin-top: 2rem;
     text-align: left;
     margin-left: 24%;
@@ -214,6 +241,90 @@ header{
     height: 100%;
     border-radius: 5rem;
     margin: -0.25rem 0 0.25rem -0.25rem;
+}
+
+/*Body of the Page Recipes/Home===================================================================================*/
+#most-popular{ 
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background: var(--green);
+}
+
+#most-popular #image-most-popular img{  
+    width: 53%;
+    height: 25rem;
+    margin-left: 50%;
+    margin-top: -17.5rem;
+    margin-bottom: -2rem;
+    border-radius: 0.25rem;
+}
+
+.Recipes-container{
+    opacity: 0;
+}
+
+.Recipes-container.actived{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    opacity: 1;
+}
+
+.backgroud-recipes.actived{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    background: black;
+    opacity: 0.7;
+}
+
+.Recipes-centre-conatainer{
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+    background: white;
+    display: inline-flex;
+    position: absolute;
+    border-radius: 0.5rem;
+
+}
+
+.Recipes-Text-container{
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+
+.Recipes-Image-container{
+    width: 50%;
+    height: 100%;
+}
+
+.Recipes-Image-container p{
+    width: 50%;
+    height: 70%;
+    margin-left: 25%;
+}
+
+.Recipes-Image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.Get-out-button{
+    width: 5rem;
+    height: 5rem;
+    margin: 3.5% 0 -6.5% 94%;
+}
+
+.Get-out-button img{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
 }
 
 /*Logos(Social Medias) & Linkes===================================================================================*/
@@ -268,10 +379,6 @@ header{
 
 .card{
     margin-top: 2.5rem;
-}
-
-.thumbs{
-  background: var(--green);
 }
 
 /*Posts===========================================================================================================*/
