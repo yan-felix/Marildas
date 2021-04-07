@@ -23,7 +23,3 @@ const Modal = {
             .remove('actived')
     }
 }
-
-const EnterPage = {
-    
-}
