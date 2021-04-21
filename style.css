@@ -13,6 +13,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Courgette', cursive;
 }
 
 /*Header==========================================================================================================*/
@@ -24,11 +25,19 @@ header{
 }
 
 #nome-blog-container{
-    margin: 2.5rem 21.5rem 0 8rem;
+    margin: 3rem 16.5rem 0 15rem;
+}
+
+#nome-blog-container h1{
+    width: 100%;
+    height: 100%;
+    font-family: 'Satisfy', cursive;
+    font-size: 100px;
+    color: white;
 }
 
 #logo-marildas-container{
-    margin: 1.5rem 17rem 0 0rem;
+    margin: 1.5rem 18rem 0 0rem;
     width: 150px;
     height: 150px;
 }
@@ -75,14 +84,20 @@ header{
 }
 
 /*NavBar==========================================================================================================*/
-#narbar-buttons-container{
+#narbar{
     margin-top: 1rem;
-    margin-left: 26.8rem;
-    width: 26.1%;
+    width: 100%;
     text-align: center;
 }
 
-#home-link{
+#navbar-centre-container{
+    width: 60%;
+    justify-content: center;
+    display: inline-flex;
+}
+
+#home-link-container, #community-link-container, #bio-link-container{
+    width: 110px;
     margin: 0 1rem 0 0;
     padding: 0 0.5rem 0 0.5rem;
     border: 1px solid black;
@@ -91,66 +106,19 @@ header{
     background: white;
 }
 
-#home-link:hover{
+#home-link-container:hover, #community-link-container:hover, #bio-link-container:hover{
     color: black;
     background: var(--ciane);
     border: 1px solid black;
     padding: 0 0.5rem 0 0.5rem;
+    transition: 0.8s;
 }
 
-#community-link{
-    margin: 0 1rem 0 0;
-    padding: 0 0.5rem 0 0.5rem;
-    border: 1px solid black;
-    border-radius: 0.25rem;
+#home-link, #community-link, #bio-link{
     color: black;
-    background: white;
 }
 
-#community-link:hover{
-    color: black;
-    background: var(--ciane);
-    border: 1px solid black;
-    padding: 0 0.5rem 0 0.5rem;
-}
-
-#bio-link{
-    padding: 0 0.5rem 0 0.5rem;
-    border: 1px solid black;
-    border-radius: 0.25rem;
-    color: black;
-    background: white;
-}
-
-#bio-link:hover{
-    color: black;
-    background: var(--ciane);
-    border: 1px solid black;
-    padding: 0 0.5rem 0 0.5rem;
-}
-
-#home-link-in-that-page{
-    color: black;
-    background: var(--ciane);
-    border: 1px solid black;
-    padding: 0 0.5rem 0 0.5rem;
-}
-
-#community-link-in-that-page{
-    color: black;
-    background: var(--ciane);
-    border: 1px solid black;
-    padding: 0 0.5rem 0 0.5rem;
-}
-
-#bio-link-in-that-page{
-    color: black;
-    background: var(--ciane);
-    border: 1px solid black;
-    padding: 0 0.5rem 0 0.5rem;
-}
-
-/*Body of the Page Recipes/Home===================================================================================*/
+/*Body of the Page Home===================================================================================*/
 #most-popular{ 
     margin-top: 1rem;
     border-radius: 0.5rem;
@@ -253,7 +221,6 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
 #left-container{
     width: 25%;
     height: 9.5rem;
-    margin-top: 4rem;
     padding: 0 2rem 0 2rem;
     position: absolute;
     margin-left: 5%;
@@ -352,16 +319,41 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
 }
 
 /*Body of the Page Bio======================================================================================================*/
-#nexter-container{
-    width: 100%;
-    display: inline-flex;
-}
-
 #Bio-text-container{
-    width: 60%;
+    width: 50%;
     height: 100%;
     margin-left: 25%;
     text-align: justify;
+}
+
+#Bio-title-text-container{
+    width: 100%;
+    text-justify: center;
+}
+
+#Photo-container-bio{
+    width: 30rem;
+    height: 30rem;
+    margin-top: 4rem;
+    position: absolute;
+    margin-left: 5%;
+    border: 2px solid rgb(226, 225, 225);
+    border-radius: 30rem;
+}
+
+#Photo-container-bio img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30rem;
+}
+
+#right-container{
+    width: 10%;
+    height: 100%;
+    margin-left: 80%;
+    position: absolute;
+    top: 16rem;
+    text-align: center;
 }
 
 #nexter-container #Bio-text-container h5, #nexter-container #Bio-text-container h6, #nexter-container #Bio-text-container nav{
@@ -369,8 +361,8 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
 }
 
 #container-social-medias{
-    text-align: center;
-    margin-left: 15%;
+    width: 20%;
+    text-align: right;
 }
 
 /*Logos(Social Medias) & Linkes===================================================================================*/
