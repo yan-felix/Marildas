@@ -14,23 +14,22 @@
 
 <body>
 
-  <div>
-    <header>
-      <div id="nome-blog-container">
-        <img src="./assets/assets/nome-blog.png" alt="Marildas">
-      </div>
+  <header>
+    <div id="nome-blog-container">
+      <img src="./assets/assets/nome-blog.png" alt="Marildas">
+    </div>
   
-      <div id="logo-marildas-container">
-        <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
-      </div>
+    <div id="logo-marildas-container">
+      <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
+    </div>
   
-      <div id="search-button-container">
-        <button>Pesquisar</button>
-      </div>
+    <div id="search-button-container">
+      <button>Pesquisar</button>
+    </div>
   
-      <div id="subscribe-button-container">
-        <button>Inscrever-se</button>
-      </div>
+    <div id="subscribe-button-container">
+      <button>Inscrever-se</button>
+    </div>
   </header>
 
   <main>
@@ -69,7 +68,7 @@
                   <div class="mb-1 text-muted">27/03/2021</div>
                   <p class="card-text mb-auto">Quem não gosta de um filezinho de peixe grelhado não é mesmo?
                   </p>
-                  <a href="#index1" class="stretched-link linkes" onclick="DOM.ViewPostedRecipe()">Continuar lendo</a>
+                  <a href="#index1" class="stretched-link linkes" onclick="Modal.open()">Continuar lendo</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                   <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +110,7 @@
                   <h3 class="mb-0">Salada com Queijo de Cabra </h3>
                   <div class="mb-1 text-muted">23/03/2021</div>
                   <p class="mb-auto">Hoje vamos deixar o besterol um pouco de lado, está bem?</p>
-                  <a href="#index3" class="stretched-link linkes">Continuar lendo</a>
+                  <a href="#index3" class="stretched-link linkes" onclick="Modal.open()">Continuar lendo</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                   <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +131,7 @@
                   <h3 class="mb-0">Salada Primavera</h3>
                   <div class="mb-1 text-muted">21/03/2021</div>
                   <p class="mb-auto">Hoje vamos dar um sabor mais primaveril a este outono.</p>
-                  <a href="#index4" class="stretched-link linkes">Continar lendo</a>
+                  <a href="#index4" class="stretched-link linkes" onclick="Modal.open()">Continar lendo</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                   <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +152,7 @@
                   <h3 class="mb-0">Ravióli com Peito de Frango</h3>
                   <div class="mb-1 text-muted">20/03/2021</div>
                   <p class="mb-auto">Bom dai! Hoje eu trouxe uma receitinha de ravióle com frango... </p>
-                  <a href="#index5" class="stretched-link linkes">Continuar lendo</a>
+                  <a href="#index5" class="stretched-link linkes" onclick="Modal.open()">Continuar lendo</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                   <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +173,7 @@
                   <h3 class="mb-0">Pudim de Laranja com Calda</h3>
                   <div class="mb-1 text-muted">18/02/2021</div>
                   <p class="mb-auto">Doces... o que seria da nossa vida sem eles, não é mesmo?</p>
-                  <a href="#index6" class="stretched-link linkes">Continuar lendo</a>
+                  <a href="#index6" class="stretched-link linkes" onclick="Modal.open()">Continuar lendo</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                   <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +194,7 @@
                   <h3 class="mb-0">Petit Gateau</h3>
                   <div class="mb-1 text-muted">16/02/2021</div>
                   <p class="mb-auto">Vamos adoçar o dia hoje com uma sobremesa deliciosa!</p>
-                  <a href="#index7" class="stretched-link linkes">Continar lendo</a>
+                  <a href="#index7" class="stretched-link linkes" onclick="Modal.open()">Continar lendo</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                   <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +215,7 @@
                   <h3 class="mb-0">Filé de Peixe com Couve</h3>
                   <div class="mb-1 text-muted">15/02/2021</div>
                   <p class="mb-auto">Huumm... que vontade de comer um peixinho!</p>
-                  <a href="#index8" class="stretched-link linkes">Continuar lendo</a>
+                  <a href="#index8" class="stretched-link linkes" onclick="Modal.open()">Continuar lendo</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                   <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -232,25 +231,23 @@
       </div>
     </section>
 
-    <div class="Recipes-container">
-      <div class="backgroud-recipes">
+    <div class="Recipe-container">
+      <div class="backgroud-recipe-container">
       </div>
 
-      <div class="Get-out-button">
+      <div id="Get-out-button">
         <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.close()">
       </div>
 
-      <div class="Recipes-centre-conatainer">
-        <div class="Recipes-Text-container">
-          <h3>Camarão com Legumes</h3>
-          <p>- Coloque para refogar abobrinha e tomate miúdo  no alho e cebola. Sal e pimenta do reino no arroz selvagem cozido normalmemte. Refogue 4 camarões grandes até ficarem vermelhos;
-            <br>
-            - No meio do prato, desenforme o arroz. Coloque os legumes em volta do arroz e decore com os 4 camarões com o rabinho para cima. Decore com salsinha picada, e o azeite do regogado do camarão jogue por cima.
-          </p>
+      <div id="Recipe-centre-conatainer">
+        <div id="Recipe-Text-container">
+          <h3>Nome da Receita</h3>
+          <div id="p-container">
+          </div>
+          
         </div>
 
-        <div class="Recipes-Image-container">
-          <img src="./assets/assets/camarao-com-legumes.png" alt="Imagem: Camarão com Legumes">
+        <div id="Recipe-Image-container">
         </div>
       </div>
     </div>

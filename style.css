@@ -150,6 +150,99 @@ header{
     padding: 0 0.5rem 0 0.5rem;
 }
 
+/*Body of the Page Recipes/Home===================================================================================*/
+#most-popular{ 
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background: var(--green);
+}
+
+#most-popular #image-most-popular img{  
+    width: 53%;
+    height: 25rem;
+    margin-left: 50%;
+    margin-top: -17.5rem;
+    margin-bottom: -2rem;
+    border-radius: 0.25rem;
+}
+
+.Recipe-container{
+    opacity: 0;
+}
+
+.Recipe-container.actived{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    opacity: 1;
+    
+}
+
+.backgroud-recipe-container.actived{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    background: black;
+    opacity: 0.7;
+}
+
+#Recipe-centre-conatainer{
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+    background: white;
+    display: inline-flex;
+    position: absolute;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(78, 55, 25);
+
+}
+
+#Recipe-Text-container{
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(78, 55, 25);
+}
+
+div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container h3{
+    margin-top: 1rem;
+    text-decoration-line: underline;
+}
+
+div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#p-container{
+    text-align: justify;
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+}
+
+#Recipe-Image-container{
+    width: 50%;
+    height: 100%;
+}
+
+#Recipe-Image-container img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(78, 55, 25);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#Get-out-button{
+    width: 5rem;
+    height: 5rem;
+    margin: 3.5% 0 -6.5% 94%;
+}
+
+#Get-out-button img{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+}
+
 /*Body of the Page Community================================================================================================*/
 .centre-container{
     text-align: center;
@@ -243,88 +336,41 @@ header{
     margin: -0.25rem 0 0.25rem -0.25rem;
 }
 
-/*Body of the Page Recipes/Home===================================================================================*/
-#most-popular{ 
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    background: var(--green);
-}
-
-#most-popular #image-most-popular img{  
-    width: 53%;
-    height: 25rem;
-    margin-left: 50%;
-    margin-top: -17.5rem;
-    margin-bottom: -2rem;
-    border-radius: 0.25rem;
-}
-
-.Recipes-container{
-    opacity: 0;
-}
-
-.Recipes-container.actived{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    position: fixed;
-    opacity: 1;
-}
-
-.backgroud-recipes.actived{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    position: fixed;
-    background: black;
-    opacity: 0.7;
-}
-
-.Recipes-centre-conatainer{
-    width: 60%;
-    height: 60%;
-    margin-left: 20%;
-    margin-top: 10%;
-    background: white;
+.publications-options-bar{
     display: inline-flex;
-    position: absolute;
-    border-radius: 0.5rem;
-
+    justify-content: center;
 }
 
-.Recipes-Text-container{
-    text-align: center;
-    width: 50%;
-    height: 50%;
+.like-button{
+    margin: 0 5rem 0.25rem 0;
+    
 }
 
-.Recipes-Image-container{
-    width: 50%;
-    height: 100%;
+.comment-button{
+    margin: 0 0 0.25rem 5rem;
+    
 }
 
-.Recipes-Image-container p{
-    width: 50%;
-    height: 70%;
-    margin-left: 25%;
-}
-
-.Recipes-Image-container img{
+/*Body of the Page Bio======================================================================================================*/
+#nexter-container{
     width: 100%;
+    display: inline-flex;
+}
+
+#Bio-text-container{
+    width: 60%;
     height: 100%;
-    border-radius: 0 0.5rem 0.5rem 0;
+    margin-left: 25%;
+    text-align: justify;
 }
 
-.Get-out-button{
-    width: 5rem;
-    height: 5rem;
-    margin: 3.5% 0 -6.5% 94%;
+#nexter-container #Bio-text-container h5, #nexter-container #Bio-text-container h6, #nexter-container #Bio-text-container nav{
+    text-align: center;
 }
 
-.Get-out-button img{
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
+#container-social-medias{
+    text-align: center;
+    margin-left: 15%;
 }
 
 /*Logos(Social Medias) & Linkes===================================================================================*/
@@ -339,10 +385,6 @@ header{
 
 .btn{
     color: var(--green);
-}
-
-#container-social-medias{
-    text-align: center;
 }
 
 .social-media-logo{
