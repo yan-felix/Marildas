@@ -16,7 +16,7 @@
     <body>
         <header>
             <div id="nome-blog-container">
-                <h1>Marilda's</h1>
+              <h1>Marilda's</h1>
             </div>
         
             <div id="logo-marildas-container">
@@ -24,45 +24,46 @@
             </div>
         
             <div id="search-button-container">
-              <button>Pesquisar</button>
+              <a class="linkes" href="#">Pesquisar</a>
             </div>
-        
+            
             <div id="subscribe-button-container">
-              <button>Inscrever-se</button>
+              <a class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>
             </div>
         </header>
 
         <main>
-            <section id="left-container">
-                <div id="mambrane-se-container">
-                    <div id="mambrane-se-logo-marilda">
-                        <img src="./assets/assets/logo-marildas.png" alt="Foto da Administradora do Blog">
-                    </div>
-                    <div id="mambrane-se-text">
-                        <h6>
-                            Inscreva-se para fazer parte da nossa comunidade e poder compartilhar suas aventuras gastronômicas conosco!
-                        </h6>
-                    </div>
+          <section id="narbar">
+            <div id="navbar-centre-container">
+                <div id="home-link-container">
+                    <a id="home-link" class="linkes" aria-current="page" href="./home.html">Home</a>
                 </div>
+                <div id="community-link-container" class="in-that-page">
+                    <a id="community-link" class="linkes" href="./community.html">Comunidade</a>
+                </div>
+                <div id="bio-link-container">
+                    <a id="bio-link" class="linkes" href="./bio.html">Biografia</a>
+                </div>
+            </div>
+          </section>
 
-                <div id="new-publication">
-                    <a class="linkes" href="#">Fazer Publicação</a>
-                </div>
+          <div id="mambrane-se-logo-marilda">
+            <img src="./assets/assets/logo-marildas.png" alt="Foto da Administradora do Blog">
+          </div>
+
+          <section id="left-container">
+              <div id="mambrane-se-text-container">
+                <h6>
+                  Inscreva-se para fazer parte da nossa comunidade e poder compartilhar suas aventuras gastronômicas conosco!
+                </h6>
+              </div>
+
+              <div id="new-publication-container">
+                <a class="linkes" href="#">Fazer Publicação</a>
+              </div>
             </section>
 
-            <section id="narbar">
-                <div id="navbar-centre-container">
-                    <div id="home-link-container">
-                        <a id="home-link" class="linkes" aria-current="page" href="./home.html">Home</a>
-                    </div>
-                    <div id="community-link-container">
-                        <a id="community-link" class="linkes" href="./community.html">Comunidade</a>
-                    </div>
-                    <div id="bio-link-container">
-                        <a id="bio-link" class="linkes" href="./bio.html">Biografia</a>
-                    </div>
-                </div>
-            </section>
+            
 
             <section class="centre-container">
                   <div id="title-publication-community">
@@ -118,11 +119,47 @@
                     <img src="./assets/assets/file-de-peixe.png" class="card-img-bottom" alt="Publicação de um membro da comunidade">
                     <div class="publications-options-bar"> <h6 class="like-button">Curtir</h6> <h6 class="comment-button">Comentar</h6> </div>
                   </div>
-
-                    
             </section>
 
+            <div class="Subscribe-Form-Container">
+                <div class="backgroud-subscribe-container">
+                </div>
+          
+                <div class="Get-out-button">
+                  <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.closeSubscribeForm()">
+                </div>
+          
+                <form id="SubscribeForm" action="button">
+                  <legend>Crie sua conta!</legend>
+          
+                  <div id="Input-Photo-container">
+                    <div id="Selected-Photo">
+                    </div>
+                    
+                    <div>
+                      <label for="SubscribePhoto">Escolher Foto</label>
+                      <input type="file" accept=".jpg,.png,.doc" name="SubscribePhoto" id="SubscribePhoto">
+                    </div>
+                  </div>
+          
+                  <div id="Input-Name-container">
+                    <label class="sr-only" for="SubscribeName">Nome</label>
+                    <input type="text" name="SubscribeName" id="SubscribeName" placeholder="Nome">
+                  </div>
+          
+                  <div id="Input-Password-container">
+                    <label class="sr-only" for="SubscribePassword">Senha</label>
+                    <input type="password" name="SubscribePassword" maxlength="6" id="SubscribePassword" placeholder="Senha">
+                  </div>
+          
+                  <div id="Create-Account-Button-container">
+                    <button>Criar Conta</button>
+                  </div>
+                </form>
+              </div>
         </main>
+
+        <script src="./scripts.js"></script>
      
         <footer>
             <h5>Marilda's</h5>

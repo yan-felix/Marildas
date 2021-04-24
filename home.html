@@ -25,18 +25,18 @@
     </div>
   
     <div id="search-button-container">
-      <button>Pesquisar</button>
+      <a class="linkes" href="#">Pesquisar</a>
     </div>
   
     <div id="subscribe-button-container">
-      <button>Inscrever-se</button>
+      <a class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>
     </div>
   </header>
 
   <main>
     <section id="narbar">
       <div id="navbar-centre-container">
-          <div id="home-link-container">
+          <div id="home-link-container" class="in-that-page">
               <a id="home-link" class="linkes" aria-current="page" href="./home.html">Home</a>
           </div>
           <div id="community-link-container">
@@ -116,10 +116,10 @@
         <div id="index3" class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
-                    <h3 class="mb-0">Salada com Queijo de Cabra </h3>
+                    <h3 class="mb-0">Salada com Queijo de Cabra</h3>
                     <div class="mb-1 text-muted">23/03/2021</div>
                     <p class="mb-auto">Hoje vamos deixar o besterol um pouco de lado, está bem?</p>
-                    <a href="#index3" class="stretched-link linkes" onclick="Modal.openRecipe()">Continuar lendo</a>
+                    <a href="#index3" class="stretched-link linkes" onclick="Modal.openRecipe(2)">Continuar lendo</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@
                     <h3 class="mb-0">Salada Primavera</h3>
                     <div class="mb-1 text-muted">21/03/2021</div>
                     <p class="mb-auto">Hoje vamos dar um sabor mais primaveril a este outono.</p>
-                    <a href="#index4" class="stretched-link linkes" onclick="Modal.openRecipe()">Continar lendo</a>
+                    <a href="#index4" class="stretched-link linkes" onclick="Modal.openRecipe(3)">Continar lendo</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@
                     <h3 class="mb-0">Ravióli com Peito de Frango</h3>
                     <div class="mb-1 text-muted">20/03/2021</div>
                     <p class="mb-auto">Bom dai! Hoje eu trouxe uma receitinha de ravióle com frango... </p>
-                    <a href="#index5" class="stretched-link linkes" onclick="Modal.openRecipe()">Continuar lendo</a>
+                    <a href="#index5" class="stretched-link linkes" onclick="Modal.openRecipe(4)">Continuar lendo</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +182,7 @@
                     <h3 class="mb-0">Pudim de Laranja com Calda</h3>
                     <div class="mb-1 text-muted">18/02/2021</div>
                     <p class="mb-auto">Doces... o que seria da nossa vida sem eles, não é mesmo?</p>
-                    <a href="#index6" class="stretched-link linkes" onclick="Modal.openRecipe()">Continuar lendo</a>
+                    <a href="#index6" class="stretched-link linkes" onclick="Modal.openRecipe(5)">Continuar lendo</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +203,7 @@
                     <h3 class="mb-0">Petit Gateau</h3>
                     <div class="mb-1 text-muted">16/02/2021</div>
                     <p class="mb-auto">Vamos adoçar o dia hoje com uma sobremesa deliciosa!</p>
-                    <a href="#index7" class="stretched-link linkes" onclick="Modal.openRecipe()">Continar lendo</a>
+                    <a href="#index7" class="stretched-link linkes" onclick="Modal.openRecipe(6)">Continar lendo</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +224,7 @@
                     <h3 class="mb-0">Filé de Peixe com Couve</h3>
                     <div class="mb-1 text-muted">15/02/2021</div>
                     <p class="mb-auto">Huumm... que vontade de comer um peixinho!</p>
-                    <a href="#index8" class="stretched-link linkes" onclick="Modal.openRecipe()">Continuar lendo</a>
+                    <a href="#index8" class="stretched-link linkes" onclick="Modal.openRecipe(7)">Continuar lendo</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +246,7 @@
       <div class="backgroud-recipe-container">
       </div>
 
-      <div id="Get-out-button">
+      <div class="Get-out-button">
         <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.closeRecipe()">
       </div>
 
@@ -254,12 +254,51 @@
         <div id="Recipe-Text-container">
           <h3>Nome da Receita</h3>
           <div id="p-container">
+            
           </div>
         </div>
 
         <figure id="Recipe-Image-container">
+          <img src="" alt="" id="Recipe-Image">
         </figure>
       </div>
+    </div>
+
+    <div class="Subscribe-Form-Container">
+      <div class="backgroud-subscribe-container">
+      </div>
+
+      <div class="Get-out-button">
+        <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.closeSubscribeForm()">
+      </div>
+
+      <form id="SubscribeForm" action="button">
+        <legend>Crie sua conta!</legend>
+
+        <div id="Input-Photo-container">
+          <div id="Selected-Photo">
+          </div>
+          
+          <div>
+            <label for="SubscribePhoto">Escolher Foto</label>
+            <input type="file" accept=".jpg,.png,.doc" name="SubscribePhoto" id="SubscribePhoto">
+          </div>
+        </div>
+
+        <div id="Input-Name-container">
+          <label class="sr-only" for="SubscribeName">Nome</label>
+          <input type="text" name="SubscribeName" id="SubscribeName" placeholder="Nome">
+        </div>
+
+        <div id="Input-Password-container">
+          <label class="sr-only" for="SubscribePassword">Senha</label>
+          <input type="password" name="SubscribePassword" maxlength="6" id="SubscribePassword" placeholder="Senha">
+        </div>
+
+        <div id="Create-Account-Button-container">
+          <button>Criar Conta</button>
+        </div>
+      </form>
     </div>
   </main>
 
