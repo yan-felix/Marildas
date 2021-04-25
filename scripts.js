@@ -71,7 +71,7 @@ const PostedRecipes = [
             #Como Fazer:
                 Corte tudo em fatias. Faça a decoração em forma de flor com as frutas vermelhas na lateral e coloque um galho de hortelã em cima.
         `,
-        img: `./assets/assets/`,
+        img: `./assets/assets/salada-primavera.png`,
     },
 
     {
@@ -117,7 +117,7 @@ const PostedRecipes = [
         index: 7,
         name: `Filé de Peixe com Couve`,
         text: ``,
-        img: `./assets/assets/`,
+        img: `./assets/assets/file-de-peixe-com-couve.png`,
     },
 
 ]
