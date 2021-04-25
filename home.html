@@ -212,7 +212,9 @@
 
       <div id="Recipe-centre-conatainer">
         <div id="Recipe-Text-container">
-          <h3>Nome da Receita</h3>
+          <div id="name-recipe-container">
+
+          </div>
           <div id="p-container">
 
           </div>
@@ -236,11 +238,12 @@
         <legend>Crie sua conta!</legend>
 
         <div id="Input-Photo-container">
-          <div id="Selected-Photo">
+          <div id="Selected-Photo-container">
+            
           </div>
 
           <div>
-            <label for="SubscribePhoto">Escolher Foto</label>
+            <label for="SubscribePhoto" onclick="SelectPhotoOnSubscription.ShowSeletedPhoto()">Escolher Foto</label>
             <input type="file" accept=".jpg,.png,.doc" name="SubscribePhoto" id="SubscribePhoto">
           </div>
         </div>
@@ -256,7 +259,7 @@
         </div>
 
         <div id="Create-Account-Button-container">
-          <button>Criar Conta</button>
+          <a href="#" class="linkes" onclick="CreateAccount.RegisterNewAccount()">Criar Conta</a>
         </div>
       </form>
     </div>

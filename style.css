@@ -140,11 +140,17 @@ header{
     justify-content: center;
 }
 
-#Input-Photo-container #Selected-Photo{
+#Input-Photo-container #Selected-Photo-container{
     width: 4rem;
     height: 4rem;
     margin-left: 33%;
     background: #e9e2e2;
+    border-radius: 4rem;
+}
+
+#Input-Photo-container #Selected-Photo-container img#Selected-Photo{
+    width: 4rem;
+    height: 4rem;
     border-radius: 4rem;
 }
 
@@ -175,9 +181,14 @@ header{
     border-width: 0;
 }
 
-#Create-Account-Button-container button{
+#Create-Account-Button-container a{
     padding: 0 0.25rem;
     border-radius: 0.25rem;
+    border: 1px solid var(--green);
+}
+
+#Create-Account-Button-container a:hover{
+    border: 1px solid var(--green);
 }
 
 /*NavBar==========================================================================================================*/
@@ -288,7 +299,7 @@ div.in-that-page{
 }
 
 #Recipes-Links-Left-Container{
-    width: 48.5%;
+    width: 49%;
     height: 100%;
 }
 
@@ -343,11 +354,13 @@ div.in-that-page{
 .recipe-thumbnail-container figure{
     width: 100%;
     height: 100%;
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .recipe-thumbnail-container figure img{
     width: 100%;
     height: 100%;
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
 /*Recipes Visualization====================================================================================*/
@@ -518,17 +531,20 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
 
 .publications-options-bar{
     display: inline-flex;
-    justify-content: center;
 }
 
 .like-button{
-    margin: 0 5rem 0.25rem 0;
-    
+    width: 50%;
+    height: 100%;
+    padding: 0.25rem 0 0 0;
+    text-align: center;   
 }
 
 .comment-button{
-    margin: 0 0 0.25rem 5rem;
-    
+    width: 50%;
+    height: 100%;
+    padding: 0.25rem 0 0 0;
+    text-align: center;
 }
 
 /*Body of the Page Bio======================================================================================================*/
