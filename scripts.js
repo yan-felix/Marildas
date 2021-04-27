@@ -153,15 +153,28 @@ const PostedRecipes = [
 
 ]
 
-let QuantAccounts = [0] //Essa merda provavelmente será inútil.
-
 const Storege = {
     get() {
-        return JSON.parse(localStorage.getItem("AccountDatas:")) || {}
+        return JSON.parse(localStorage.getItem("AccountDatas:")) || {};
     },
 
     set(Account) {
         localStorage.setItem("AccountDatas:", JSON.stringify(Account));
+    }
+}
+
+const App = {
+    inIt(){
+        let confirmAccount = Storege.get();
+        console.log(confirmAccount);
+        if (confirmAccount.userCod !== ""){
+            CreateAccount.ConfirmSubscribe();
+        }else{
+            let divSubscribe = document.createElement('div');
+            divSubscribe.setAttribute("id", "subscribe-button-container");
+            divSubscribe.innerHTML = `<a id="subscribe-button" class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscreva-se</a>`;
+            document.querySelector("#Header-Buttons-Container").appendChild(divSubscribe);
+        }
     }
 }
 
@@ -266,29 +279,112 @@ const Modal = {
 
 }
 
+const Config = {
+    openConfig(){
+        let profileDiv = document.querySelector("#Profile-container");
+        profileDiv.parentElement.removeChild(profileDiv);
+
+        let configDiv = document.createElement('div');
+        configDiv.setAttribute("id","Config-options-container");
+        configDiv.innerHTML = `
+            <div id="Close-Config-options-container">
+                <img src="./assets/assets/throw-error-button.png" alt="Fechar Configrações" onclick="Config.closeConfig()">
+            </div>
+
+            <div id="Change-Password-container">
+                <h6>Mudar Senha</h6>
+            </div>
+  
+            <div id="Change-Photo-container">
+                <h6>Mudar Foto de Perfil</h6>
+            </div>
+  
+            <div id="Unfollow-container">
+                <h6>Desinscrever-se</h6>
+            </div>
+        `;
+        document.querySelector("#Header-Buttons-Container").appendChild(configDiv);
+    },
+
+    closeConfig(){
+        let configOptionsDiv = document.querySelector("#Config-options-container");
+        configOptionsDiv.parentNode.removeChild(configOptionsDiv);
+
+        let profileDiv = document.createElement('div');
+        profileDiv.setAttribute("id", "Profile-container");
+        profileDiv.innerHTML = `
+            <div id="Profile-container">
+                <figure id="Config-container">
+                    <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
+                </figure>
+
+                <figure id="Profile-Photo-container">
+                    <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
+                </figure>
+            </div>`;
+        document.querySelector("#Header-Buttons-Container").appendChild(profileDiv); 
+    },
+}
 
 const CreateAccount = {
     Name: document.querySelector("#SubscribeName"),
     Password: document.querySelector("#SubscribePassword"),
-    UserCod: `M${QuantAccounts.length + 1}U`, // Fazer esse maldito gerador de código funcionar.
     NPosts: 0,
+
+    ConfirmSubscribe(){
+        let subscribedDiv = document.querySelector("#subscribe-button-container");
+        subscribedDiv.parentElement.removeChild(subscribedDiv);
+
+        let profileDiv = document.createElement('div');
+        profileDiv.setAttribute("id", "Profile-container");
+        profileDiv.innerHTML = `
+            <div id="Profile-container">
+                <figure id="Config-container">
+                    <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
+                </figure>
+
+                <figure id="Profile-Photo-container">
+                    <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
+                </figure>
+            </div>`;
+        document.querySelector("#Header-Buttons-Container").appendChild(profileDiv);  
+    },
+
+    CloseErrorOfSubscribeForm(){
+        let error = document.getElementById('Throw-Error-container');
+        error.parentNode.removeChild(error);
+    },
 
     RegisterNewAccount(){
         let Account = {
             name: CreateAccount.Name.value,
             password: CreateAccount.Password.value,
-            userCod: CreateAccount.UserCod,
+            userCod: CreateAccount.Name.value + CreateAccount.Password.value,
             nPosts: CreateAccount.NPosts,
         }
 
-        Storege.set(Account);
-        QuantAccounts.push(QuantAccounts.length);
-        Modal.closeSubscribeForm();
+        if (Account.name.trim() === "" || Account.password.trim() === "" || Account.userCod === Account.name){
+            let error = document.createElement('div');
+            error.setAttribute("id", "Throw-Error-container");
+            error.innerHTML = `
+                <img id="Close-Error-Button" src="./assets/assets/throw-error-button.png" alt="Saída da Receita" onclick="CreateAccount.CloseErrorOfSubscribeForm()">
+                <h5>
+                    Opa! Parece que você esqueceu de alguma coisa. Por favor, incira um nome e uma senha válidaos, eles são importantes para o funcionamento do site e necessários para a formação dos dados que identificarão sua conta.
+                </h5>
+            `
+            document.querySelector(".Subscribe-Form-Container").appendChild(error); 
+        }else{
+            Storege.set(Account);
+            CreateAccount.ConfirmSubscribe();
+            Modal.closeSubscribeForm();
+        }
+
+        
 
     },
-
-    
 }
+
+App.inIt();
 
 
 

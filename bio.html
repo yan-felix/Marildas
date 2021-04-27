@@ -23,12 +23,14 @@
       <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
     </div>
 
-    <div id="search-button-container">
-      <a class="linkes" href="#">Pesquisar</a>
-    </div>
+    <div id="Header-Buttons-Container">
+      <div id="search-button-container">
+        <a class="linkes" href="#">Pesquisar</a>
+      </div>
   
-    <div id="subscribe-button-container">
-      <a class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>
+      <div id="subscribe-button-container">
+        <a class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>
+      </div>
     </div>
   </header>
 
@@ -110,9 +112,10 @@
         <legend>Crie sua conta!</legend>
 
         <div id="Input-Photo-container">
-          <div id="Selected-Photo">
+          <div id="Selected-Photo-container">
+            
           </div>
-          
+
           <div>
             <label for="SubscribePhoto">Escolher Foto</label>
             <input type="file" accept=".jpg,.png,.doc" name="SubscribePhoto" id="SubscribePhoto">

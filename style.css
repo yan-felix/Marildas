@@ -2,7 +2,8 @@
 
 /*Geral===========================================================================================================*/
 :root{
-    --green:#1b4b1b;
+    --dark-green:#1b4b1b;
+    --green: #079c07;
     --light-green: #09c528;
     --dark-grey: #4e4d4d;
     --light-grey: #969292;
@@ -16,49 +17,67 @@
     font-family: 'Courgette', cursive;
 }
 
+html{
+    font-size: 93.75%; /* 100% = 16px, logo 93.75% = 15px. */
+}
+
+.centre-container{
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+}
+
 /*Header==========================================================================================================*/
 header{
     width: 100%;
-    height: 200px;
-    background: var(--green);
+    height: 150px;
+    background: var(--dark-green);
     display: inline-flex;
 }
 
 #nome-blog-container{
     width: 33%;
-    height: 50%;
-    margin-top: 50px;
+    height: 150px;
+
 }
 
 #nome-blog-container h1{
-    width: 17%;
+    width: 100%;
     height: 100%;
-    margin-left: 33%;
     font-family: 'Satisfy', cursive;
-    font-size: 100px;
     color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 80pt;
+
 }
 
 #logo-marildas-container{
     margin: 0;
     width: 33%;
     height: 150px;
+    padding-top: 10px;
+    text-align: center;
+
 }
 
 #logo-marildas-container img{
-    width: 150px;
-    height: 150px;
-    margin-left: 36%;
-    margin-top: 25px;
+    width: 130px;
+    height: 130px;
 }
 
 #Header-Buttons-Container{
-    width: 20%;
-    display: inline-flex;
+    width: 30%;
+    display: flex;
+    align-items: center;
+
 }
 
 #search-button-container{
-    margin: 5.5rem 1.5rem 0 0;
+    width: 50%;
+    height: 150px;
+    text-align: center;
+    padding-top: 56px;
 }
 
 #search-button-container a{
@@ -67,7 +86,7 @@ header{
     border: 1px solid white;
     border-radius: 0.25rem;
     color: white;
-    background: var(--green);
+    background: var(--dark-green);
     transition: 0.4s;
 }
 
@@ -78,8 +97,10 @@ header{
 }
 
 #subscribe-button-container{
-    margin: 5.5rem 0 0 0;
-    width: 120px;
+    width: 50%;
+    height: 150px;
+    text-align: center;
+    padding-top: 56px;
 }
 
 #subscribe-button-container a{
@@ -87,7 +108,7 @@ header{
     border: 1px solid white;
     border-radius: 0.25rem;
     color: white;
-    background: var(--green);
+    background: var(--dark-green);
 }
 
 #subscribe-button-container a:hover{
@@ -97,6 +118,97 @@ header{
     transition: 0.4s;   
 }
 
+a#subscribe-button-unactived{
+    color: rgb(8, 8, 8);
+    background: white;
+    border: 1px solid black;
+}
+
+#Profile-container{
+    display: inline-flex;
+    align-items: center;
+    width: 50%;
+    height: 150px;
+}
+
+#Config-container{
+    width: 40%;
+    height: 25%;
+    background-color: white;
+    margin-right: 4px;
+    border-radius: 100%;
+}
+
+#Config-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    box-shadow: 1px 2px 2px rgb(71, 71, 71);
+    
+}
+
+#Config-options-container{
+    align-items: center;
+    width: 50%;
+    height: 150px;
+}
+
+#Close-Config-options-container{
+    width: 20px;
+    height: 20px;
+    margin-left: 75%;
+    margin-bottom: 6px;
+    margin-top:  10px;
+    border-radius: 5rem;
+}
+
+#Close-Config-options-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    background-color: white;
+}
+
+#Change-Password-container{
+    width: 70%;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 2px 0 0 0;
+    margin: 0 15% 0 0;
+    background-color: rgb(241, 239, 239);
+}
+
+#Change-Photo-container{
+    width: 70%;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 2px 0 0 0;
+    margin: 0 15% 0 0;
+    background-color: rgb(241, 239, 239);
+}
+
+#Unfollow-container{
+    width: 70%;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 2px 0 0 0;
+    margin: 0 15% 0 0;
+    background-color: rgb(241, 239, 239);
+}
+
+#Profile-Photo-container{
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+
+}
+
+#Profile-Photo-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    box-shadow: 1px 2px 2px rgb(71, 71, 71);
+}
 /*Subscribe Form==================================================================================================*/
 .Subscribe-Form-Container{
     opacity: 0;
@@ -161,7 +273,7 @@ header{
 
 #Input-Photo-container label{
     width: 100%;
-    background-color: var(--green);
+    background-color: var(--dark-green);
     margin: 0.5rem 0 0 0 ;
     border-radius: 5px;
     color: #fff;
@@ -184,11 +296,31 @@ header{
 #Create-Account-Button-container a{
     padding: 0 0.25rem;
     border-radius: 0.25rem;
-    border: 1px solid var(--green);
+    border: 1px solid var(--dark-green);
 }
 
 #Create-Account-Button-container a:hover{
-    border: 1px solid var(--green);
+    border: 1px solid var(--dark-green);
+}
+
+#Close-Error-Button{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 99%;
+    margin-top: -1rem;
+    background-color: rgb(255, 249, 249);
+    border-radius: 2rem;
+}
+
+#Throw-Error-container{
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgb(235, 232, 232);
+    position: absolute;
+    top: 1.5rem;
+    padding: 0 1rem 0.5rem 1rem;
+    text-align: justify;
+    border-radius: 0.5rem;
 }
 
 /*NavBar==========================================================================================================*/
@@ -235,7 +367,30 @@ div.in-that-page{
 }
 
 /*Body of the Page Home===================================================================================*/
-#Section-Spotlights{
+#items-wropper{
+    width: 100%;
+    height: 400px;
+    display: inline-flex;
+    margin-top: 1.5rem;
+}
+#img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#item{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    flex: none;
+    width:100%;
+    height:400px;
+    scroll-snap-align: start;
+}
+
+/* #Section-Spotlights{
     display: inline-flex;
 }
 
@@ -291,7 +446,7 @@ div.in-that-page{
     width: 100%;
     height: 100%;
     border-radius: 0.25rem;
-}
+} */
 
 #Section-Recipes{
     display: inline-flex;
@@ -446,60 +601,83 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
 }
 
 /*Body of the Page Community================================================================================================*/
-.centre-container{
+#Community-Right-Container{
+    width: 20%;
+    height: 100%;
+    margin-left: 80%;
+    position: fixed;
+    display: table-column;
+    top: 140px;
+}
+
+#Community-Right-Container h3{
+    margin: 1rem 0 0 0;
+    padding: 0;
     text-align: center;
-    width: 60%;
-    margin-left: 20%;
 }
 
-#left-container{
-    width: 25rem;
-    height: 10rem;
-    position: absolute;
-    margin-left: 7.5%;
-    margin-top: 1rem;
-    border: 2px solid rgb(226, 225, 225);
-    border-radius: 0rem 1rem 1rem 1rem;
-}
-
-#mambrane-se-logo-marilda{ 
-    width: 4.5rem;
-    height: 4.5rem;
-}
-
-#mambrane-se-logo-marilda img{ 
+#Rank-Container{
     width: 100%;
     height: 100%;
-    margin: 2rem 0.5rem 0 4rem;
 }
 
-#mambrane-se-text-container{ 
-    width: 100%;
-    height: 4rem;
-    padding: 1rem 2rem 0 2rem;
-    border-radius: 0 0.5rem 0 0;
-    text-align: justify;
-}
-
-#new-publication-container{
-    width: 90%;
-    margin: 10% 5% 0 5%;
-    text-align: center;
-}
-
-#new-publication-container a{
-    color: rgb(128, 125, 125);
-    border: 1px solid rgb(128, 125, 125);
+.rank-row-container{
+    margin: 1rem 1rem;
+    border: 1px solid rgb(109, 109, 109);
     border-radius: 0.25rem;
-    padding: 0.5rem 2rem;
+    height: 4.5%;
+    display: inline-flex;
 }
 
-#new-publication-container a:hover{ 
-    background: rgb(128, 125, 125);
-    color: white;
+.profile-rank-row-container{
+    width: 85%;
+    height: 100%;
+    display: inline-flex;
+    background-color: var(--green);
 }
 
-#title-publication-community{ 
+.profile-rank-row-container:hover{
+    background-color: var(--light-green);
+}
+
+.profile-photo-rank-row-container{
+    width: 17%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: var(--dark-green);
+}
+
+.profile-photo-rank-row-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+h4.userName-rank-row{
+    width: 90%;
+    height: 100%;
+    padding-left: 8px;
+    padding-top: 2.8%;
+    color: black;
+}
+
+.rank-position-container{
+    width: 15%;
+    height: 100%;
+    padding-top: 2%;
+    background-color: rgb(235, 231, 232);
+}
+
+.rank-position-container h4{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: black;
+    
+    
+}
+
+#title-publications-community{ 
     margin-top: 2rem;
     text-align: left;
     margin-left: 24%;
@@ -545,6 +723,56 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
     height: 100%;
     padding: 0.25rem 0 0 0;
     text-align: center;
+}
+
+#left-container{
+    width: 25rem;
+    height: 10rem;
+    position: fixed;
+    bottom: 335px;
+    margin-left: 7%;
+    border: 2px solid rgb(226, 225, 225);
+    border-radius: 0rem 1rem 1rem 1rem;
+    
+}
+
+#mambrane-se-logo-marilda{ 
+    width: 4.5rem;
+    height: 4.5rem;
+    position: fixed;
+    bottom: 500px;
+}
+
+#mambrane-se-logo-marilda img{ 
+    width: 100%;
+    height: 100%;
+    margin: 2rem 0.5rem 0 4rem;
+}
+
+#mambrane-se-text-container{ 
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 2rem 0 2rem;
+    border-radius: 0 0.5rem 0 0;
+    text-align: justify;
+}
+
+#new-publication-container{
+    width: 90%;
+    margin: 10% 5% 0 5%;
+    text-align: center;
+}
+
+#new-publication-container a{
+    color: rgb(128, 125, 125);
+    border: 1px solid rgb(128, 125, 125);
+    border-radius: 0.25rem;
+    padding: 0.5rem 2rem;
+}
+
+#new-publication-container a:hover{ 
+    background: rgb(128, 125, 125);
+    color: white;
 }
 
 /*Body of the Page Bio======================================================================================================*/
@@ -597,7 +825,7 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
 /*Logos(Social Medias) & Linkes===================================================================================*/
 .linkes{
     text-decoration: none;
-    color: var(--green);
+    color: var(--dark-green);
 }
 
 .linkes:hover{
@@ -605,7 +833,7 @@ div.Recipe-container div#Recipe-centre-conatainer div#Recipe-Text-container div#
 }
 
 .btn{
-    color: var(--green);
+    color: var(--dark-green);
 }
 
 .social-media-logo{
