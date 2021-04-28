@@ -61,11 +61,6 @@ const PostedRecipes = [
                 <br>
                 -1 colher de molho inglês;
                 <br>
-                -Um punhado de orégano.
-            <br>
-            #Preparo do Molho:
-                2 colheres de manteiga para derreter, um colher de mostarda, uma colher de mel tudo para derreter na panela, depois que derreter coloca um pouco de orégano e 250 ml de creme de leite, quando tiver abrir fervura, coloca meia colher de molho inglês, deixa ferver e só coloca na sala quando o molho estiver frio.
-            <br>
             #Como Fazer:
                 Corte a cenoura em lâminas bem finas, as maçãs em lâminas bem finas com casca, amêndoas socas com o socador levemente, os dois pões cortados em triângulo e posto no forno para asar.
 
@@ -75,7 +70,7 @@ const PostedRecipes = [
                 
                 Finalize com salsicha picada.
         `,
-        img: `./assets/assets/`,
+        img: `./assets/assets/salada-com-queijo-de-cabra.png`,
     },
 
     {
@@ -165,17 +160,36 @@ const Storege = {
 
 const App = {
     inIt(){
-        let confirmAccount = Storege.get();
-        console.log(confirmAccount);
-        if (confirmAccount.userCod !== ""){
-            CreateAccount.ConfirmSubscribe();
+        let confereAccount = Storege.get();
+        if (confereAccount.userCod !== ""){
+            let subscribeButton = document.getElementById("subscribe-button-container");
+
+            let profileDiv = document.createElement('div');
+            profileDiv.setAttribute("id", "Profile-container");
+            profileDiv.innerHTML = `
+                    <figure id="Config-container">
+                        <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
+                    </figure>
+
+                    <figure id="Profile-Photo-container">
+                        <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
+                    </figure>
+                `;
+            let headerButtonContainer = subscribeButton.parentNode;
+            headerButtonContainer.replaceChild(profileDiv, subscribeButton);
         }else{
+            App.reload();
             let divSubscribe = document.createElement('div');
             divSubscribe.setAttribute("id", "subscribe-button-container");
-            divSubscribe.innerHTML = `<a id="subscribe-button" class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscreva-se</a>`;
+            divSubscribe.innerHTML = `<a id="subscribe-button" class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>`;
             document.querySelector("#Header-Buttons-Container").appendChild(divSubscribe);
         }
-    }
+    },
+
+    reload(){
+        let subscribeButton = document.getElementById("subscribe-button-container");
+        subscribeButton.parentNode.removeChild(subscribeButton);
+    },
 }
 
 const ShowRecipe = {
@@ -292,15 +306,15 @@ const Config = {
             </div>
 
             <div id="Change-Password-container">
-                <h6>Mudar Senha</h6>
+                <h6><a class="linkes">Mudar Senha</a></h6>
             </div>
   
             <div id="Change-Photo-container">
-                <h6>Mudar Foto de Perfil</h6>
+                <h6><a class="linkes">Mudar Foto de Perfil</a></h6>
             </div>
   
-            <div id="Unfollow-container">
-                <h6>Desinscrever-se</h6>
+            <div id="Unfollow-container" onclick="Config.Unfollow()">
+                <h6><a class="linkes" onclick="Config.Unfollow()">Desinscrever-se</a></h6>
             </div>
         `;
         document.querySelector("#Header-Buttons-Container").appendChild(configDiv);
@@ -324,31 +338,27 @@ const Config = {
             </div>`;
         document.querySelector("#Header-Buttons-Container").appendChild(profileDiv); 
     },
+
+    Unfollow(){
+        let account = Storege.get();
+        account.userCod = "";
+        Storege.set(account);
+        Config.closeConfig();
+
+        let profileDiv = document.querySelector("#Profile-container");
+        profileDiv.parentElement.removeChild(profileDiv);
+        
+        let subscribeButton = document.createElement('div');
+        subscribeButton.setAttribute("id", "subscribe-button-container");
+        subscribeButton.innerHTML = `<a class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>`
+        document.querySelector("#Header-Buttons-Container").appendChild(subscribeButton);
+    },
 }
 
 const CreateAccount = {
     Name: document.querySelector("#SubscribeName"),
     Password: document.querySelector("#SubscribePassword"),
     NPosts: 0,
-
-    ConfirmSubscribe(){
-        let subscribedDiv = document.querySelector("#subscribe-button-container");
-        subscribedDiv.parentElement.removeChild(subscribedDiv);
-
-        let profileDiv = document.createElement('div');
-        profileDiv.setAttribute("id", "Profile-container");
-        profileDiv.innerHTML = `
-            <div id="Profile-container">
-                <figure id="Config-container">
-                    <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
-                </figure>
-
-                <figure id="Profile-Photo-container">
-                    <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
-                </figure>
-            </div>`;
-        document.querySelector("#Header-Buttons-Container").appendChild(profileDiv);  
-    },
 
     CloseErrorOfSubscribeForm(){
         let error = document.getElementById('Throw-Error-container');
@@ -375,8 +385,26 @@ const CreateAccount = {
             document.querySelector(".Subscribe-Form-Container").appendChild(error); 
         }else{
             Storege.set(Account);
-            CreateAccount.ConfirmSubscribe();
+            let subscribeButton = document.getElementById("subscribe-button-container");
+
+            let profileDiv = document.createElement('div');
+            profileDiv.setAttribute("id", "Profile-container");
+            profileDiv.innerHTML = `
+                <div id="Profile-container">
+                    <figure id="Config-container">
+                        <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
+                    </figure>
+
+                    <figure id="Profile-Photo-container">
+                        <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
+                    </figure>
+                </div>`;
+            let headerButtonContainer = subscribeButton.parentNode;
+            headerButtonContainer.replaceChild(profileDiv, subscribeButton);
+
             Modal.closeSubscribeForm();
+
+            App.reload()
         }
 
         
