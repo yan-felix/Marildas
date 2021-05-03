@@ -175,10 +175,9 @@ const App = {
                         <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
                     </figure>
                 `;
-            let headerButtonContainer = subscribeButton.parentNode;
-            headerButtonContainer.replaceChild(profileDiv, subscribeButton);
+            document.querySelector("#Header-Buttons-Container").appendChild(profileDiv);
+            
         }else{
-            App.reload();
             let divSubscribe = document.createElement('div');
             divSubscribe.setAttribute("id", "subscribe-button-container");
             divSubscribe.innerHTML = `<a id="subscribe-button" class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>`;
@@ -291,6 +290,30 @@ const Modal = {
             .remove('actived');
     },
 
+    openNewPostForm(){
+        document
+            .querySelector('.Do-New-Post-container')
+            .classList
+            .add('actived');
+
+        document
+            .querySelector('.backgroud-do-new-post-container')
+            .classList
+            .add('actived');
+    },
+
+    closeNewPostForm(){
+        document
+            .querySelector('.Do-New-Post-container')
+            .classList
+            .remove('actived');
+
+        document
+            .querySelector('.backgroud-do-new-post-container')
+            .classList
+            .remove('actived');
+    }
+
 }
 
 const Config = {
@@ -327,31 +350,36 @@ const Config = {
         let profileDiv = document.createElement('div');
         profileDiv.setAttribute("id", "Profile-container");
         profileDiv.innerHTML = `
-            <div id="Profile-container">
-                <figure id="Config-container">
+                <div id="Config-container">
                     <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
-                </figure>
+                </div>
 
-                <figure id="Profile-Photo-container">
+                <div id="Profile-Photo-container">
                     <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
-                </figure>
-            </div>`;
-        document.querySelector("#Header-Buttons-Container").appendChild(profileDiv); 
+                </div>
+        `;
+
+        document.querySelector("#Header-Buttons-Container").appendChild(profileDiv);
     },
 
     Unfollow(){
         let account = Storege.get();
         account.userCod = "";
+        account.name = "";
+        account.password = "";
+        account.nPosts = "";
         Storege.set(account);
-        Config.closeConfig();
-
-        let profileDiv = document.querySelector("#Profile-container");
-        profileDiv.parentElement.removeChild(profileDiv);
+        
+        let configOptionsDiv = document.querySelector("#Config-options-container");
+        document.querySelector("#Header-Buttons-Container").removeChild(configOptionsDiv);
         
         let subscribeButton = document.createElement('div');
         subscribeButton.setAttribute("id", "subscribe-button-container");
         subscribeButton.innerHTML = `<a class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>`
+        
         document.querySelector("#Header-Buttons-Container").appendChild(subscribeButton);
+
+        
     },
 }
 
@@ -385,12 +413,10 @@ const CreateAccount = {
             document.querySelector(".Subscribe-Form-Container").appendChild(error); 
         }else{
             Storege.set(Account);
-            let subscribeButton = document.getElementById("subscribe-button-container");
 
             let profileDiv = document.createElement('div');
             profileDiv.setAttribute("id", "Profile-container");
             profileDiv.innerHTML = `
-                <div id="Profile-container">
                     <figure id="Config-container">
                         <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
                     </figure>
@@ -398,9 +424,8 @@ const CreateAccount = {
                     <figure id="Profile-Photo-container">
                         <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
                     </figure>
-                </div>`;
-            let headerButtonContainer = subscribeButton.parentNode;
-            headerButtonContainer.replaceChild(profileDiv, subscribeButton);
+            `;
+            document.querySelector("#Header-Buttons-Container").appendChild(profileDiv);
 
             Modal.closeSubscribeForm();
 
@@ -410,6 +435,14 @@ const CreateAccount = {
         
 
     },
+}
+
+const AccountDatas = { //Este bloco será o responsável por pegar os dados das contas dos suários do Local Storege para que possam ser usados para os mais dferentes fins.
+    getAccountName(){
+        const account = Storege.get();
+        const accountName = account.name;
+        return accountName
+    }
 }
 
 App.inIt();

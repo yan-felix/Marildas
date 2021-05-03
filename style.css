@@ -2,12 +2,12 @@
 
 /*Geral===========================================================================================================*/
 :root{
-    --dark-green:#1b4b1b;
-    --green: #079c07;
-    --light-green: #09c528;
+    --dark-green:#056e0e;
+    --green: #08c030;
+    --light-green: #08ec4c;
     --dark-grey: #4e4d4d;
     --light-grey: #969292;
-    --ciane: rgb(195, 235, 207);
+    --ciane: rgb(156, 250, 237);
      
 }
 
@@ -25,6 +25,11 @@ html{
     text-align: center;
     width: 60%;
     margin-left: 20%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
 }
 
 /*Header==========================================================================================================*/
@@ -46,7 +51,7 @@ header{
     font-family: 'Satisfy', cursive;
     color: white;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 800%;
 }
 
@@ -68,13 +73,12 @@ header{
     width: 30%;
     display: flex;
     align-items: center;
-
 }
 
 #search-button-container{
     width: 50%;
     height: 150px;
-    text-align: center;
+    text-align: right;
     padding-top: 55px;
 }
 
@@ -102,6 +106,7 @@ header{
 }
 
 #subscribe-button-container a{
+    width: 10px;
     padding: 0rem 0.5rem 0.1rem 0.5rem;
     border: 1px solid white;
     border-radius: 0.25rem;
@@ -118,40 +123,52 @@ header{
 
 #Profile-container{
     display: inline-flex;
-    align-items: center;
     width: 50%;
     height: 150px;
 }
 
-/*Config======================================================================================================*/
 #Config-container{
-    width: 40%;
-    height: 25%;
-    background-color: white;
-    margin-right: 4px;
-    border-radius: 100%;
+    width: 50%;
+    height: 150px;
+    padding-top: 55px;
+    text-align: right;
 }
 
 #Config-container img{
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 30%;
     border-radius: 10rem;
     box-shadow: 1px 2px 2px rgb(71, 71, 71);
     
 }
 
+#Profile-Photo-container{
+    width: 40%;
+    height: 150px;
+    padding-top: 33px;
+    text-align: center;
+}
+
+#Profile-Photo-container img{
+    width: 60%;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: 1px 2px 2px rgb(71, 71, 71);
+}
+
+/*Config Options======================================================================================================*/
 #Config-options-container{
-    align-items: center;
     width: 50%;
     height: 150px;
+    padding: 0 0 0 8%;
 }
 
 #Close-Config-options-container{
     width: 20px;
     height: 20px;
     margin-left: 75%;
-    margin-bottom: 6px;
-    margin-top:  6px;
+    margin-bottom: 10px;
+    margin-top:  4px;
     border-radius: 5rem;
 }
 
@@ -163,44 +180,31 @@ header{
 }
 
 #Change-Password-container{
-    width: 70%;
+    width: 80%;
     text-align: center;
     border-radius: 0.5rem;
     padding: 2px 0 0 0;
-    margin: 0 15% 1% 0;
     background-color: rgb(241, 239, 239);
 }
 
 #Change-Photo-container{
-    width: 70%;
+    width: 80%;
     text-align: center;
     border-radius: 0.5rem;
     padding: 2px 0 0 0;
-    margin: 0 15% 1% 0;
     background-color: rgb(241, 239, 239);
 }
 
 #Unfollow-container{
-    width: 70%;
+    width: 80%;
     text-align: center;
     border-radius: 0.5rem;
     padding: 2px 0 0 0;
-    margin: 0 15% 0 0;
     background-color: rgb(241, 239, 239);
 }
 
-#Profile-Photo-container{
-    width: 50%;
-    height: 50%;
-    border-radius: 100%;
-
-}
-
-#Profile-Photo-container img{
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    box-shadow: 1px 2px 2px rgb(71, 71, 71);
+#Change-Password-container a, #Change-Photo-container a, #Unfollow-container a{
+    color: black
 }
 /*Subscribe Form==================================================================================================*/
 .Subscribe-Form-Container{
@@ -354,7 +358,7 @@ header{
 
 div.in-that-page{
     color: black;
-    background: var(--light-green);
+    background: var(--green);
     border: 1px solid black;
     padding: 0 0.5rem 0 0.5rem;
 }
@@ -365,8 +369,7 @@ div.in-that-page{
 }
 
 /*Body of the Page Home===================================================================================*/
-/*
-#items-wropper{
+/* #items-wropper{
     width: 100%;
     height: 400px;
     display: inline-flex;
@@ -389,6 +392,23 @@ div.in-that-page{
     height:400px;
     scroll-snap-align: start;
 } */
+#Home-Left-container{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 210px;
+}
+
+#Pass-left-carousel-button{
+    width: 50%;
+    height: 360px;
+    margin-left: 25%;
+}
+
+#Pass-left-carousel-button img{
+    width: 100%;
+    height: 100%;
+}
 
  #Section-Spotlights{
     display: inline-flex;
@@ -397,7 +417,7 @@ div.in-that-page{
 #Spotlights-Container{
     width: 100%;
     height: 450px;
-    background: #1b4b1b;
+    background: var(--dark-green);
     display: inline-flex;
     border-radius: 0.25rem;
     margin-top: 1.5rem;
@@ -406,28 +426,31 @@ div.in-that-page{
 
 #Spotlights-Text-Container{
     width: 50%;
-    height: 90%;
-    margin: 2% 0 2% 5%;
+    height: 100%;
+    padding: 2% 2% 0% 2%;
     color: white;
+    display: table;
 }
 
 #Spotlights-Text-Title-Container{
+    width: 100%;
+    height: 15%;
     font-family: 'Courgette', cursive;
-    font-size: 35px;
-    margin-bottom: 3rem;
     text-align: center;
 }
 
 #Spotlights-Text-Presentation-Container{
+    width: 100%;
+    height: 75%;
+    padding-top: 4%;
     font-family: 'Courgette', cursive;
-    font-size: 25px;
-    margin-bottom: 4rem;
     text-align: justify;
 }
 
 #Spotlights-Text-Link-Container{
+    width: 100%;
+    height: 10%;
     font-family: 'Courgette', cursive;
-    font-size: 25px; 
 }
 
 #Spotlights-Text-Link-Container a{
@@ -437,8 +460,8 @@ div.in-that-page{
 
 #Spotlights-Image-Container{
     width: 50%;
-    height: 90%;
-    margin: 2% 2% 2% 5%;
+    height: 100%;
+    padding: 2% 2% 2% 2%;
     border-radius: 0.25rem;
 }
 
@@ -446,6 +469,30 @@ div.in-that-page{
     width: 100%;
     height: 100%;
     border-radius: 0.25rem;
+}
+
+#Home-Right-container{
+    width: 20%;
+    height: 100%;
+    margin-left: 80%;
+    position: absolute;
+    top: 210px;
+    padding-left: 5%;
+
+}
+
+#Pass-right-carousel-button{
+    width: 50%;
+    height: 360px;
+}
+
+#Pass-right-carousel-button img{
+    width: 100%;
+    height: 100%;
+}
+
+#Title-Marildas-Recipes-container{
+    margin-top: 2.5rem;
 }
 
 #Section-Recipes{
@@ -466,36 +513,46 @@ div.in-that-page{
 
 .recipe-link{
     width: 100%;
-    height: 15rem;
+    height: 200px;
     margin: 0.7rem 0;
     display: inline-flex;
     border: 1px solid rgb(238, 237, 237);
-    border-radius: 0.25rem;
-    
+    border-radius: 0.25rem;   
 }
 
 .recipe-link-text-container{
-    width: 65%;
+    width: 100%;
     height: 100%;
     border-radius: 0.25rem 0 0 0.25rem;
     box-shadow: 2px 2px rgb(139, 136, 136);
 }
 
-.recipe-link-text-container h1{
-    margin: 1rem 0 0.25rem 0;
-    font-size: 25px;
+.recipe-link-text-recipe-name-container{
+    width: 100%;
+    height: 20%;
+    padding-top: 2.5%;
 }
 
-.recipe-link-text-container h5{
-    margin-bottom: 1rem;
-    font-size: 20px;
+.recipe-link-text-date{
+    width: 100%;
+    height: 10%;
     color: rgb(121, 120, 120);
 }
 
-.recipe-link-text-container p{
-    width: 90%;
-    margin-left: 5%;
-    font-size: 20px;
+.recipe-link-text-presentation{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    padding: 5% 4%;
+}
+
+.recipe-link-text-presentation h6{
+    font-size: 120%;
+}
+
+.recipe-link-text-openRecipe-container{
+    width: 100%;
+    height: 15%;
 }
 
 .recipe-thumbnail-container{
@@ -692,7 +749,7 @@ h4.userName-rank-row{
     width: 60%;
     margin-left: 20%;
     text-align: left;
-    box-shadow: 2px 2px rgb(145, 143, 143);
+    box-shadow: 2px 2px rgb(167, 165, 165);
 }
 
 .user-perfil-infomation{
@@ -755,11 +812,10 @@ h4.userName-rank-row{
     margin-left: 25%;
     display: table;
     padding: 1rem 2rem 0 2rem;
-    border-radius: 0 0.5rem 0 0;
     text-align: justify;
-    border: 2px solid rgb(226, 225, 225);
-    border-radius: 0rem 1rem 1rem 1rem;
-    box-shadow: 2px 2px rgb(145, 143, 143);
+    border: 1px solid rgb(226, 225, 225);
+    border-radius: 0.25rem;
+    box-shadow: 1px 1px rgb(145, 143, 143);
 }
 
 #mambrane-se-text-container p{
@@ -797,51 +853,181 @@ h4.userName-rank-row{
     transition: 0.2s;
 }
 
-/*Body of the Page Bio======================================================================================================*/
-#Bio-text-container{
-    width: 50%;
-    height: 100%;
-    margin-left: 25%;
-    text-align: justify;
+/*Form New Post===========================================================================*/
+.Do-New-Post-container{
+    opacity: 0;
 }
 
-#Bio-title-text-container{
+.Do-New-Post-container.actived{
     width: 100%;
-    text-justify: center;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.backgroud-do-new-post-container.actived{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    background: black;
+    opacity: 0.7;
+}
+
+#do-new-post-centre-conatainer{
+    width: 30%;
+    height: 95%;
+    margin-left: 35%;
+    margin-top: 0.5%;
+    background: white;
+    position: absolute;
+    border-radius: 0.25rem;
+}
+
+#new-post-form-container{
+    width: 100%;
+    height: 100%;
+}
+
+#new-post-user-profile-container{
+    width: 100%;
+    height: 5%;
+    display: inline-flex;
+}
+
+#new-post-user-profile-photo-container{
+    width: 10%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+#new-post-user-profile-photo-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+#new-post-user-profile-user-name-container{
+    width: 50%;
+    height: 100%;
+    padding: 1.25% 0 0 3%;
+    text-align: left;
+}
+
+#new-post-text-content-container{
+    width: 100%;
+    height: 60%;
+    padding-top: 6px;
+    text-align: center;
+}
+
+#new-post-input-title-container{
+    width: 100%;
+    height: 5%;
+}
+
+#New-Post-Input-Title{
+    width: 40%;
+}
+
+#new-post-input-ingredients-container{
+    width: 100%;
+    height: 50%;
+    padding-top: 10px;
+}
+
+#New-Post-Input-Ingredients{
+    width: 30%;
+}
+
+#new-post-input-ingredients-list-container{
+    width: 100%;
+    height: 85%;
+    padding-top: 6px;
+}
+
+#New-Post-Input-Ingredients-List{
+    width: 90%;
+    height: 100%;
+}
+
+#new-post-input-textarea-container{
+    width: 100%;
+    height: 44%;
+    margin-top: 0;
+}
+
+#New-Post-Input-Textarea{
+    width: 90%;
+    height: 100%;
+}
+
+#new-post-image-container{
+    width: 100%;
+    height: 35%;
+    border-radius: 0.25rem;
+}
+
+#new-post-image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+}
+
+/*Body of the Page Bio======================================================================================================*/
+#Bio-Left-container{
+    width: 30%;
+    height: 100%;
+    top: 200px;
+    position: absolute;
+    padding: 5% 0 0 5%;
 }
 
 #Photo-container-bio{
-    width: 28rem;
-    height: 28rem;
-    margin-top: 4rem;
-    position: absolute;
-    margin-left: 6%;
-    border: 2px solid rgb(226, 225, 225);
-    border-radius: 28rem;
+    width: 90%;
+    height: 50%;
+    border-radius: 100%;
 }
 
 #Photo-container-bio img{
     width: 100%;
     height: 100%;
-    border-radius: 28rem;
+    border-radius: 100%;
 }
 
-#right-container{
-    width: 10%;
+#Bio-text-container{
+    width: 70%;
     height: 100%;
-    margin-left: 80%;
-    position: absolute;
-    top: 16rem;
+    margin-left: 15%;
+    text-align: justify;
+}
+
+#Bio-title-text-container{
+    width: 100%;
     text-align: center;
 }
 
-#nexter-container #Bio-text-container h5, #nexter-container #Bio-text-container h6, #nexter-container #Bio-text-container nav{
+#Bio-Centre-container{
+    width: 40%;
+    margin-left: 30%;
+}
+
+#Bio-Right-container{
+    width: 30%;
+    height: 100%;
+    margin-left: 70%;
+    position: absolute;
+    top: 200px;
     text-align: center;
 }
 
 #container-social-medias{
-    width: 20%;
-    text-align: right;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 15%;
 }
 
 /*Logos(Social Medias) & Linkes===================================================================================*/

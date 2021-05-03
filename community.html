@@ -29,8 +29,6 @@
         <a class="linkes" href="#">Pesquisar</a>
       </div>
 
-      <div id="subscribe-button-container">
-      </div>
     </div>
   </header>
 
@@ -302,7 +300,7 @@
       </div>
 
       <div id="new-publication-container">
-        <a class="linkes" href="#">Publicar</a>
+        <a class="linkes" href="#" onclick="Modal.openNewPostForm()">Publicar</a>
       </div>
     </section>
 
@@ -335,7 +333,7 @@
 
         <div id="Input-Password-container">
           <label class="sr-only" for="SubscribePassword">Senha</label>
-          <input type="password" name="SubscribePassword" maxlength="6" id="SubscribePassword" placeholder="Senha">
+          <input type="password" name="SubscribePassword" maxlength="15" id="SubscribePassword" placeholder="Senha">
         </div>
 
         <div id="Create-Account-Button-container">
@@ -344,6 +342,54 @@
       </form>
     </div>
   </main>
+
+  <div class="Do-New-Post-container">
+    <div class="backgroud-do-new-post-container">
+    </div>
+
+    <div class="Get-out-button">
+      <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.closeNewPostForm()">
+    </div>
+
+    <div id="do-new-post-centre-conatainer">
+      <div id="new-post-form-container" title="Formulário de Postagem">
+        <div id="new-post-user-profile-container">
+          <div id="new-post-user-profile-photo-container">
+            <img src="./assets/assets/logo-marildas.png" alt="User Photo">
+          </div>
+          <div id="new-post-user-profile-user-name-container">
+            <h4>User Name</h4>
+          </div>
+        </div>
+
+        <div id="new-post-text-content-container">
+          <div id="new-post-input-title-container">
+            <label for="New-Post-Input-Title" class="sr-only">Título</label>
+            <input type="text" id="New-Post-Input-Title" placeholder="Título">
+          </div>
+
+          <div id="new-post-input-ingredients-container">
+            <label for="New-Post-Input-Ingredients" class="sr-only">Ingredientes</label>
+            <input type="text" id="New-Post-Input-Ingredients" placeholder="Ingredientes">
+            <button onclick="">Inserir</button>
+            <div id="new-post-input-ingredients-list-container">
+              <textarea id="New-Post-Input-Ingredients-List">#Ingredientes:</textarea>
+            </div>
+            
+          </div>
+
+          <div id="new-post-input-textarea-container">
+            <label for="New-Post-Input-Textarea" class="sr-only">Texto do Post</label>
+            <textarea id="New-Post-Input-Textarea">#Preparo:</textarea>
+          </div>
+        </div>
+
+        <div id="new-post-image-container">
+          <img src="./assets/assets/salada-com-queijo-de-cabra.png" alt="Salada com Queijo de Cabra" id="new-post-image">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="./scripts.js"></script>
 

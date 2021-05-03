@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -30,8 +31,7 @@
         <a class="linkes" href="#">Pesquisar</a>
       </div>
   
-      <div id="subscribe-button-container">
-      </div>
+      
     </div>
   </header>
 
@@ -50,40 +50,66 @@
       </div>
     </section>
 
+    <section id="Home-Left-container">
+      <div id="Pass-left-carousel-button">
+        <img src="" alt="Passar à Esquerda">
+      </div>
+    </section>
+
     <section class="centre-container">
       <div id="Spotlights-Container">
-          <div id="Spotlights-Text-Container">
-              <div id="Spotlights-Text-Title-Container">
-                  <h1>Salmão Cru</h1>
-              </div>
-              <div id="Spotlights-Text-Presentation-Container">
-                  <p>
-                      Olá, meu amores! Hoje vim trazer para vocês uma receita deliciosa e prática: uma
-                    salada de salmão cru. Vamos ao passo a passo?
-                  </p>
-              </div>
-              <div id="Spotlights-Text-Link-Container">
-                  <a href="#" class="linkes">Continuar lendo...</a>
-              </div>   
-          </div>
-                       
-          <div id="Spotlights-Image-Container">
-              <a href="./home.html">
-                  <img src="./assets/assets/salmao-cru.png" alt="Salmão Cru">
-              </a>
-          </div>
+        <div id="Spotlights-Text-Container">
+            <div id="Spotlights-Text-Title-Container">
+                <h1>Salmão Cru</h1>
+            </div>
+            <div id="Spotlights-Text-Presentation-Container">
+                <h4>
+                  Olá, meu amores! Hoje vim trazer para vocês uma receita deliciosa e prática: uma
+                  salada de salmão cru. Vamos ao passo a passo?
+                </h4>      
+            </div>
+            <div id="Spotlights-Text-Link-Container">
+              <h4>
+                <a href="#" class="linkes">Continuar lendo...</a>
+              </h4>
+                
+            </div>   
+        </div>
+                     
+        <div id="Spotlights-Image-Container">
+            <a href="./home-teste.html">
+                <img src="./assets/assets/salmao-cru.png" alt="Salmão Cru">
+            </a>
+        </div>
       </div>
-  </section> 
+    </section> 
+
+    <section id="Home-Right-container">
+      <div id="Pass-right-carousel-button">
+        <img src="" alt="Passar à Direita">
+      </div>
+    </section>
+
+    <div id="Title-Marildas-Recipes-container" class="centre-container">
+      <h1>Receitas da Dona Marilda:</h1>
+    </div>
 
     <section id="Section-Recipes" class="centre-container">
       <div id="Recipes-Links-Left-Container">
         <div id="index0" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Filé de Peixe</h1>
-            <h5>27/03/2021</h5>
-            <p>Quem não gosta de um filezinho de peixe grelhado não é mesmo?</p>
-            <br>
-            <p><a href="#index0" class="linkes" onclick="Modal.openRecipe(0)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Filé de Peixe</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>27/03/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Quem não gosta de um filezinho de peixe grelhado não é mesmo?</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index0" class="linkes" onclick="Modal.openRecipe(0)">Continuar lendo...</a></h6>
+            </div>
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -94,11 +120,18 @@
 
         <div id="index2" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Salada com Queijo de Cabra</h1>
-            <h5>23/03/2021</h5>
-            <p>Hoje vamos deixar o besterol um pouco de lado, está bem?</p>
-            <br>
-            <p><a href="#index2" class="linkes" onclick="Modal.openRecipe(2)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Salada com Queijo de Cabra</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>23/03/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Hoje vamos deixar o besterol um pouco de lado, está bem?</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index2" class="linkes" onclick="Modal.openRecipe(2)">Continuar lendo...</a></h6>
+            </div>
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -109,11 +142,18 @@
 
         <div id="index4" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Ravióli com Peito de Frango</h1>
-            <h5>20/03/2021</h5>
-            <p>Bom dai! Hoje eu trouxe uma receitinha de ravióle com frango...</p>
-            <br>
-            <p><a href="#index4" class="linkes" onclick="Modal.openRecipe(4)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Ravióli com Peito de Frango</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>20/03/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Bom dai! Hoje eu trouxe uma receitinha de ravióle com frango...</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index4" class="linkes" onclick="Modal.openRecipe(4)">Continuar lendo...</a></h6>
+            </div>
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -124,11 +164,18 @@
 
         <div id="index6" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Petit Gateau</h1>
-            <h5>16/02/2021</h5>
-            <p>Vamos adoçar o dia hoje com uma sobremesa deliciosa!</p>
-            <br>
-            <p><a href="#index6" class="linkes" onclick="Modal.openRecipe(6)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Petit Gateau</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>16/02/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Vamos adoçar o dia hoje com uma sobremesa deliciosa!</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index6" class="linkes" onclick="Modal.openRecipe(6)">Continuar lendo...</a></h6>
+            </div>
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -141,11 +188,18 @@
       <div id="Recipes-Links-Right-Container">
         <div id="index1" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Camarão com Legumes</h1>
-            <h5>25/03/2021</h5>
-            <p>Espero que você não seja alérgico, porque hoje teremos camarão!</p>
-            <br>
-            <p><a href="#index1" class="linkes" onclick="Modal.openRecipe(1)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Camarão com Legumes</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>25/03/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Espero que você não seja alérgico, porque hoje teremos camarão!</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index1" class="linkes" onclick="Modal.openRecipe(1)">Continuar lendo...</a></h6>
+            </div>
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -156,11 +210,18 @@
 
         <div id="index3" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Salada Primavera</h1>
-            <h5>21/03/2021</h5>
-            <p>Hoje vamos dar um sabor mais primaveril a este outono.</p>
-            <br>
-            <p><a href="#index3" class="linkes" onclick="Modal.openRecipe(3)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Salada Primavera</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>21/03/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Hoje vamos dar um sabor mais primaveril a este outono.</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index3" class="linkes" onclick="Modal.openRecipe(3)">Continuar lendo...</a></h6>
+            </div>
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -171,11 +232,18 @@
 
         <div id="index5" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Pudim de Laranja com Calda</h1>
-            <h5>18/02/2021</h5>
-            <p>Doces... o que seria da nossa vida sem eles, não é mesmo?</p>
-            <br>
-            <p><a href="#index5" class="linkes" onclick="Modal.openRecipe(5)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Pudim de Laranja com Calda</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>18/02/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Doces... o que seria da nossa vida sem eles, não é mesmo?</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index5" class="linkes" onclick="Modal.openRecipe(5)">Continuar lendo...</a></h6>
+            </div> 
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -186,11 +254,18 @@
 
         <div id="index7" class="recipe-link">
           <div class="recipe-link-text-container">
-            <h1>Filé de Peixe com Couve</h1>
-            <h5>15/02/2021</h5>
-            <p>Huumm... que vontade de comer um peixinho!</p>
-            <br>
-            <p><a href="#index7" class="linkes" onclick="Modal.openRecipe(7)">Continuar lendo...</a></p>
+            <div class="recipe-link-text-recipe-name-container">
+              <h4>Filé de Peixe com Couve</h4>
+            </div>
+            <div class="recipe-link-text-date">
+              <h6>15/02/2021</h6>
+            </div>
+            <div class="recipe-link-text-presentation">
+              <h6>Huumm... que vontade de comer um peixinho!</h6>
+            </div>
+            <div class="recipe-link-text-openRecipe-container">
+              <h6><a href="#index7" class="linkes" onclick="Modal.openRecipe(7)">Continuar lendo...</a></h6>
+            </div> 
           </div>
           <div class="recipe-thumbnail-container">
             <figure>
@@ -254,7 +329,7 @@
 
         <div id="Input-Password-container">
           <label class="sr-only" for="SubscribePassword">Senha</label>
-          <input type="password" name="SubscribePassword" maxlength="6" id="SubscribePassword" placeholder="Senha">
+          <input type="password" name="SubscribePassword" maxlength="15" id="SubscribePassword" placeholder="Senha">
         </div>
 
         <div id="Create-Account-Button-container">
