@@ -2,351 +2,657 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marilda's</title>
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <!-- Animate CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Marilda's</title>
 </head>
 
 <body>
-
   <header>
-    <div id="nome-blog-container">
-      <h1>Marilda's</h1>
-    </div>
-
-    <div id="logo-marildas-container">
-      <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
-    </div>
-
-    <div id="Header-Buttons-Container">
-      <div id="search-button-container">
-        <a class="linkes" href="#">Pesquisar</a>
-      </div>
-  
-      
-    </div>
+    <nav id="NavBarContainer">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link navlink linkInThatPage" aria-current="page" href="./home.html">
+            <h6>Home</h6>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navlink" href="./community.html">
+            <h6>Comunidade</h6>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navlink" href="./bio.html">
+            <h6>Sobre</h6>
+          </a>
+        </li>
+        <li class="nav-item"  id="SubscribeLink">
+          
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <nav id="narbar">
-      <div id="navbar-centre-container">
-        <div id="home-link-container" class="in-that-page">
-          <a id="home-link" class="linkes" aria-current="page" href="./home.html">Home</a>
-        </div>
-        <div id="community-link-container">
-          <a id="community-link" class="linkes" href="./community.html">Comunidade</a>
-        </div>
-        <div id="bio-link-container">
-          <a id="bio-link" class="linkes" href="./bio.html">Biografia</a>
-        </div>
+    <div id="BlogPrasentationContainer">
+      <div id="BlogPrasentationImageContainer">
+        <img src="./assets/assets/logo-marildas.png" alt="Logo Marilda's">
       </div>
-    </nav>
-
-    <aside id="Home-Left-container">
-      <div id="Pass-left-carousel-button">
-        <img src="" alt="Passar à Esquerda">
+      <div id="BlogPrasentationTitleContainer">
+        <h1>Marilda's</h1>
       </div>
-    </aside>
-
-    <section class="centre-container">
-      <div id="Spotlights-Container">
-        <div id="Spotlights-Text-Container">
-            <div id="Spotlights-Text-Title-Container">
-                <h1>Salmão Cru</h1>
-            </div>
-            <div id="Spotlights-Text-Presentation-Container">
-                <h4>
-                  Olá, meu amores! Hoje vim trazer para vocês uma receita deliciosa e prática: uma
-                  salada de salmão cru. Vamos ao passo a passo?
-                </h4>      
-            </div>
-            <div id="Spotlights-Text-Link-Container">
-              <h4>
-                <a href="#" class="linkes">Continuar lendo...</a>
-              </h4>
-                
-            </div>   
-        </div>
-                     
-        <div id="Spotlights-Image-Container">
-            <a href="./home-teste.html">
-                <img src="./assets/assets/salmao-cru.png" alt="Salmão Cru">
-            </a>
-        </div>
+      <div id="BlogPrasentationSubtitleContainer">
+        <h5>Blog de gastronomia, receitas e dicas.</h5>
       </div>
-    </section> 
-
-    <aside id="Home-Right-container">
-      <div id="Pass-right-carousel-button">
-        <img src="" alt="Passar à Direita">
-      </div>
-    </aside>
-
-    <div id="Title-Marildas-Recipes-container" class="centre-container">
-      <h1>Receitas da Dona Marilda:</h1>
     </div>
 
-    <section id="Section-Recipes" class="centre-container">
-      <div id="Recipes-Links-Left-Container">
-        <div id="index0" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Filé de Peixe</h4>
-            </div>
-            <div class="recipe-link-text-date">
-              <h6>27/03/2021</h6>
-            </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Quem não gosta de um filezinho de peixe grelhado não é mesmo?</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index0" class="linkes" onclick="Modal.openRecipe(0)">Continuar lendo...</a></h6>
-            </div>
-          </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/file-de-peixe.png" alt="Thumbnai: Filé de Peixe">
-            </figure>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active h-100">
+          <img src="./assets/assets/pudim-de-laranja.png" class="d-block w-100 h-100" alt="Foto: Dona Marilda">
+          <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
-
-        <div id="index2" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Salada com Queijo de Cabra</h4>
-            </div>
-            <div class="recipe-link-text-date">
-              <h6>23/03/2021</h6>
-            </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Hoje vamos deixar o besterol um pouco de lado, está bem?</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index2" class="linkes" onclick="Modal.openRecipe(2)">Continuar lendo...</a></h6>
-            </div>
-          </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/salada-com-queijo-de-cabra.png" alt="Thumbnail: Salada com Queijo de Cabra">
-            </figure>
+        <div class="carousel-item">
+          <img src="./assets/assets/petit-gateau.png" class="d-block w-100" alt="Foto: Petit Gateau">
+          <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
-
-        <div id="index4" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Ravióli com Peito de Frango</h4>
-            </div>
-            <div class="recipe-link-text-date">
-              <h6>20/03/2021</h6>
-            </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Bom dai! Hoje eu trouxe uma receitinha de ravióle com frango...</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index4" class="linkes" onclick="Modal.openRecipe(4)">Continuar lendo...</a></h6>
-            </div>
-          </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/ravioli-com-peito-de-frango.png" alt="Thumbnail: Ravióli com Peito de Frango">
-            </figure>
+        <div class="carousel-item">
+          <img src="./assets/assets/salada-primavera.png" class="d-block w-100" alt="Foto: Salada Primavera">
+          <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
-
-        <div id="index6" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Petit Gateau</h4>
-            </div>
-            <div class="recipe-link-text-date">
-              <h6>16/02/2021</h6>
-            </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Vamos adoçar o dia hoje com uma sobremesa deliciosa!</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index6" class="linkes" onclick="Modal.openRecipe(6)">Continuar lendo...</a></h6>
-            </div>
-          </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/petit-gateau.png" alt="Thumbnail: Petit Gateau">
-            </figure>
+        <div class="carousel-item">
+          <img src="./assets/assets/camarao-com-legumes.png" class="d-block w-100" alt="Foto: Camarão com Legumes">
+          <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-      <div id="Recipes-Links-Right-Container">
-        <div id="index1" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Camarão com Legumes</h4>
+    <section id="MarildasPostsContainer">
+      <h6>Postagens:</h6>
+      <div class="card-group">
+        <article class="card" id="index0">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/camarao-com-legumes.png" alt="Falha ao carregar a imagem">
+          </div>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Camarão com Legumes</h5>
             </div>
-            <div class="recipe-link-text-date">
-              <h6>25/03/2021</h6>
+            <div class="marilda-post-presentation-container">
+              <p>
+                Olá, meu amores! Hoje eu acordei com uma vontade de comer frutos do mar... então pensei: "Por que não
+                prepara alguns camarões com legumes!?", e como não poderia ser diferente, vim trazer essa receita
+                prática e deliciosa pra vocês.
+              </p>
             </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Espero que você não seja alérgico, porque hoje teremos camarão!</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index1" class="linkes" onclick="Modal.openRecipe(1)">Continuar lendo...</a></h6>
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(1)" class="open-recipe-icons d-inline-block" href="#index0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/camarao-com-legumes.png" alt="Thumbnail: Camarão com Legumes">
-            </figure>
-          </div>
-        </div>
+        </article>
 
-        <div id="index3" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Salada Primavera</h4>
-            </div>
-            <div class="recipe-link-text-date">
-              <h6>21/03/2021</h6>
-            </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Hoje vamos dar um sabor mais primaveril a este outono.</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index3" class="linkes" onclick="Modal.openRecipe(3)">Continuar lendo...</a></h6>
-            </div>
+        <article class="card" id="index1">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/salada-primavera.png" alt="Falha ao carregar a imagem">
           </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/salada-primavera.png" alt="Thumbnail: Salada Primavera">
-            </figure>
-          </div>
-        </div>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Salada Primavera</h5>
+            </div>
+            <div class="marilda-post-presentation-container">
+              <p>
+                Que tal darmos um sabor primaveril ao seu dia? Hoje vamos ser fitness, porém sem abrir mão do sabor.
+                Para isso, eu trouxe para vocês esta recietinha deliciosa e páratica de salada primavera.
+              </p>
+            </div>
 
-        <div id="index5" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Pudim de Laranja com Calda</h4>
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(3)" class="open-recipe-icons d-inline-block" href="#index1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
             </div>
-            <div class="recipe-link-text-date">
-              <h6>18/02/2021</h6>
-            </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Doces... o que seria da nossa vida sem eles, não é mesmo?</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index5" class="linkes" onclick="Modal.openRecipe(5)">Continuar lendo...</a></h6>
-            </div> 
           </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/pudim-de-laranja.png" alt="Thumbnail: Pudim de Laranja com Calda">
-            </figure>
-          </div>
-        </div>
+        </article>
+      </div>
 
-        <div id="index7" class="recipe-link">
-          <div class="recipe-link-text-container">
-            <div class="recipe-link-text-recipe-name-container">
-              <h4>Filé de Peixe com Couve</h4>
-            </div>
-            <div class="recipe-link-text-date">
-              <h6>15/02/2021</h6>
-            </div>
-            <div class="recipe-link-text-presentation">
-              <h6>Huumm... que vontade de comer um peixinho!</h6>
-            </div>
-            <div class="recipe-link-text-openRecipe-container">
-              <h6><a href="#index7" class="linkes" onclick="Modal.openRecipe(7)">Continuar lendo...</a></h6>
-            </div> 
+      <div class="card-group">
+        <article class="card" id="index2">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/salmao-cru.png" alt="Falha ao carregar a imagem">
           </div>
-          <div class="recipe-thumbnail-container">
-            <figure>
-              <img src="./assets/assets/file-de-peixe-com-couve.png" alt="Thumbnail: Filé de Peixe com Couve">
-            </figure>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Salada de Salmão Cru</h5>
+            </div>
+            <div class="marilda-post-presentation-container">
+              <p>
+                Quem disse que só japoneses conseguem fazer receitas deliciosas com salmão? Hoje eu vou lhes ensinar a
+                fazer essa saladinha de salmão cru deliciosa. Vamos nessa!
+              </p>
+            </div>
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(10)" class="open-recipe-icons d-inline-block" href="#index2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <article class="card" id="index3">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/pudim-de-laranja.png" alt="Falha ao carregar a imagem">
+          </div>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Pudim de Laranja com Calda</h5>
+            </div>
+            <div class="marilda-post-presentation-container">
+              <p>
+                Ah, os doces! O que seria da nossa vida sem eles, não é mesmo? Claro que não podemos exagerar, mas uma
+                beiteirinha uma vez ou outra não faz mal - pelo contrário! Então hoje vamos nos dar o luxo de sair um
+                pouquinho da dieta rsrs.
+              </p>
+            </div>
+
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(5)" class="open-recipe-icons d-inline-block" href="#index3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="card-group">
+        <article class="card" id="index4">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/foto-de-perfil-oficial-temporaria_files/crème-brûlée.jpg" alt="Não foi possível carregar a imagem.">          
+          </div>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Crème Brulés</h5>
+            </div>
+            <div class="marilda-post-presentation-container">
+              <p>
+                Oui, hoje teremos um pouco da França neste blog! A culinária francesa é muito famosa e tida como uma das melhores do mundo, e para provar isto eu trouxe para vocês uma receita deliciosa de Crème Brulés. Faisons-le!!
+              </p>
+            </div>
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(9)" class="open-recipe-icons d-inline-block" href="#index4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="index5">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/foto-de-perfil-oficial-temporaria_files/salada-verao.jpg" alt="Não foi possível carregar a imagem.">
+          </div>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Salada Verão</h5>
+            </div>
+            <div class="marilda-post-presentation-container">
+              <p>
+                No Brasil temos o costume de comer o abacate açucarado - ou seja, como algo doce -, e pode ser bem estranho à primeira vista pensar no abacate como um ingrediente de uma salada, mas acreditem em mim: deem uma chance para essa salada verão, os gringos sabem o que estão fazendo kkkk.
+              </p>
+            </div>
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(8)" class="open-recipe-icons d-inline-block" href="#index5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="card-group">
+        <article class="card" id="index4">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/petit-gateau.png" alt="Falha ao carregar a imagem">
+          </div>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Petit Gateau</h5>
+            </div>
+            <div class="marilda-post-presentation-container">
+              <p>
+                Há quem diga que a melhor parte da refeição é a sobremesa. Bem.. para mim a melhor parte refeição é toda
+                ela, mas temos que admitir que uma boa sobremesa faz toda a diferença. E que sobremesa melhor que essa
+                maravilha de petit gateau que além de dar água na boca ainda dá um toque de finesa ao nosso almoço, ou à
+                nossa janta, não é mesmo?
+              </p>
+            </div>
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(6)" class="open-recipe-icons d-inline-block" href="#index4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="index5">
+          <div class="marilda-post-image-container">
+            <img src="./assets/assets/ravioli-com-peito-de-frango.png" alt="Falha ao carregar a imagem">
+          </div>
+          <div class="marilda-post-text-container">
+            <div class="marilda-post-title-container">
+              <h5 class="text-center">Ravili com Peito de Frango</h5>
+            </div>
+            <div class="marilda-post-presentation-container">
+              <p>
+                Esta é sem dúvida uma das minhas receitas preferidas. Além de ser muito saudável é também uma delícia.
+                E hoje eu vim mostrar pra vocês como prepara esse delicioso prato!
+              </p>
+            </div>
+            <div class="text-center article-buttons-container d-inline-flex">
+              <a title="Visualizar" onclick="Modal.openRecipe(4)" class="open-recipe-icons d-inline-block" href="#index5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </a>
+              <a href="#" class="link-comment d-inline-block" title="Comentar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                  class="bi bi-chat-square" viewBox="0 0 16 16">
+                  <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                </svg>
+              </a>
+              <a href="#" class="link-like d-inline-block" title="Curtir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-suit-heart" viewBox="0 0 16 16">
+                  <path
+                    d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                </svg>
+              </a>
+
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    
+    <aside id="MarildasLeftContainerHome">
+      <div id="MarildaPhotoContainer" class="card">
+        <img src="./assets/assets/foto-de-perfil-oficial-temporaria_files/Foto-de-Perfil3.jpg" alt="Foto: Dona Marilda">
+      </div>
+      <h6>Marilda Santos - A Cozinheira.</h6>
+      <p>
+        Olá, eu sou Marilda Santos. Seja muito bem vindo ao meu blog! O Marilda's foi feito para todos os amantes da boa cozinha e da gstronomia, quer sejam amadores ou profissionais.
+      </p>
+      <p>
+        Aqui você encontrará várias receitas deliciosas feitas com muito amor e carinho.
+      </p>
+
+      <div id="SocialMidiaLinksContainer">
+        <div class="SocialLinkContainer">
+          <a class="SocialMidiaLink" href="#">
+            <img class="SocialMidiaLogo" src="./assets/assets/instagram-logo.png" title="Instagram" alt="Instagram">
+          </a>
+        </div>
+
+        <div class="SocialLinkContainer">
+          <a class="SocialMidiaLink" href="#">
+            <img class="SocialMidiaLogo" src="./assets/assets/facebook-logo.png" title="Facebook" alt="Facebook">
+          </a>
+        </div>
+
+        <div class="SocialLinkContainer">
+          <a class="SocialMidiaLink" href="#">
+            <img class="SocialMidiaLogo" src="./assets/assets/twitter-logo.png" title="Twitter" alt="Twitter">
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <aside id="MarildasRightContainer">
+      <div id="SearchRecipesContainer">
+        <input type="text" placeholder="Pesquisar Receita" name="SearchBar" id="SearchBar">
+        <svg id="SearchButton" xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+          class="bi bi-search" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+      </div>
+
+      <div id="CategoriesContainer">
+        <h4>Categorias</h4>
+        <div>
+          <a class="links" href="#">Biscoitos</a>
+        </div>
+        <div>
+          <a class="links" href="#">Bolos</a>
+        </div>
+        <div>
+          <a class="links" href="#">Carnes</a>
+        </div>
+        <div>
+          <a class="links" href="#">Doces</a>
+        </div>
+        <div>
+          <a class="links" href="#">Frutos do mar</a>
+        </div>
+        <div>
+          <a class="links" href="#">Peixes</a>
+        </div>
+        <div>
+          <a class="links" href="#">Saladas</a>
+        </div>
+        <div>
+          <a class="links" href="#">Salgados</a>
+        </div>
+      </div>
+
+      <div id="SpotlightsWeek">
+        <h4>Mais Lidos da Semana</h4>
+
+        <hr>
+        <a href="#" class="linksSpotLights" onclick="Modal.openRecipe(4)">
+          <div class="SpotlightsObject">
+            <div class="SpotlightsObjectImageContainer">
+              <img src="./assets/assets/ravioli-com-peito-de-frango.png" alt="Ravióli com Peito de Frango">
+            </div>
+            <div class="SpotlightsObjectTextContainer">
+              <h6>Ravióli com Peito de Frango</h6>
+              <p>Esta é sem duvidade uma das minhas receitas preferidas. Além de ser muito saudável é também uma
+                delícia. E hoje eu vim mostrar pra vocês como prepara esse delicioso prato!</p>
+            </div>
+          </div>
+        </a>
+
+        <hr>
+        <a href="#" class="linksSpotLights" onclick="Modal.openRecipe(5)">
+          <div class="SpotlightsObject">
+            <div class="SpotlightsObjectImageContainer">
+              <img src="./assets/assets/pudim-de-laranja.png" alt="Pudim de Laranja com Calda">
+            </div>
+            <div class="SpotlightsObjectTextContainer">
+              <h6>Pudim de Laranja com Calda</h6>
+              <p>Ah, os doces! O que seria da nossa vida sem eles, não é mesmo? Claro que não podemos exagerar, mas uma
+                beiteirinha uma vez ou outra não faz mal - pelo contrário! Então hoje vamos nos dar o luxo de sair um
+                pouquinho da dieta rsrs.</p>
+            </div>
+          </div>
+        </a>
+
+        <hr>
+        <a href="#" class="linksSpotLights" onclick="Modal.openRecipe(1)">
+          <div class="SpotlightsObject">
+            <div class="SpotlightsObjectImageContainer">
+              <img src="./assets/assets/camarao-com-legumes.png" alt="Camarão com Legumes">
+            </div>
+            <div class="SpotlightsObjectTextContainer">
+              <h6>Camarão com Legumes</h6>
+              <p>Olá, meu amores! Hoje eu acordei com uma vontade de comer frutos do mar... então pensei: "Por que não
+                prepara alguns camarões com legumes!?", e como não poderia ser diferente, vim trazer essa receita
+                prática e deliciosa pra vocês.</p>
+            </div>
+          </div>
+        </a>
+
+        <hr>
+        <a href="#" class="linksSpotLights" onclick="Modal.openRecipe(6)">
+          <div class="SpotlightsObject">
+            <div class="SpotlightsObjectImageContainer">
+              <img src="./assets/assets/petit-gateau.png" alt="Petit Gateau">
+            </div>
+            <div class="SpotlightsObjectTextContainer">
+              <h6>Petit Gateau</h6>
+              <p>Há quem diga que a melhor parte da refeição é a sobremesa. Bem.. para mim a melhor parte refeição é
+                toda ela, mas temos que admitir que uma boa sobremesa faz toda a diferença. E que sobremesa melhor que
+                essa maravilha de petit gateau que além de dar água na boca ainda dá um toque de finesa ao nosso almoço,
+                ou à nossa janta, não é mesmo?</p>
+            </div>
+          </div>
+        </a>
+
+        <hr>
+        <a href="#" class="linksSpotLights" onclick="Modal.openRecipe(3)">
+          <div class="SpotlightsObject">
+            <div class="SpotlightsObjectImageContainer">
+              <img src="./assets/assets/salada-primavera.png" alt="Salada Primavera">
+            </div>
+            <div class="SpotlightsObjectTextContainer">
+              <h6>Salada Primavera</h6>
+              <p>Que tal darmos um sabor primaveril ao seu dia? Hoje vamos ser fitness, porém sem abrir mão do sabor.
+                Para isso, eu trouxe para vocês esta recietinha deliciosa e páratica de salada primavera!</p>
+            </div>
+          </div>
+        </a>
+        <hr>
+      </div>
+    </aside>
   </main>
 
   <div class="Recipe-container">
-
-      <div class="backgroud-recipe-container">
-      </div>
-
-      <div class="Get-out-button">
-        <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.closeRecipe()">
-      </div>
-
-      <div id="Recipe-centre-conatainer">
-        <div id="Recipe-Text-container">
-          <div id="name-recipe-container">
-
-          </div>
-          <div id="p-container">
-
-          </div>
-        </div>
-
-        <figure id="Recipe-Image-container">
-          <img src="" alt="" id="Recipe-Image">
-        </figure>
-      </div>
+    <div class="backgroud-recipe-container">
     </div>
 
-    <div class="Subscribe-Form-Container">
-      <div class="backgroud-subscribe-container">
-      </div>
-
-      <div class="Get-out-button">
-        <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.closeSubscribeForm()">
-      </div>
-
-      <form id="SubscribeForm" action="button">
-        <legend>Crie sua conta!</legend>
-
-        <div id="Input-Photo-container">
-          <div id="Selected-Photo-container">
-            
-          </div>
-
-          <div>
-            <label for="SubscribePhoto">Escolher Foto</label>
-            <input type="file" accept=".jpg,.png,.doc" name="SubscribePhoto" id="SubscribePhoto">
-          </div>
-        </div>
-
-        <div id="Input-Name-container">
-          <label class="sr-only" for="SubscribeName">Nome</label>
-          <input type="text" name="SubscribeName" id="SubscribeName" placeholder="Nome">
-        </div>
-
-        <div id="Input-Password-container">
-          <label class="sr-only" for="SubscribePassword">Senha</label>
-          <input type="password" name="SubscribePassword" maxlength="15" id="SubscribePassword" placeholder="Senha">
-        </div>
-
-        <div id="Create-Account-Button-container">
-          <a href="#" class="linkes" onclick="CreateAccount.RegisterNewAccount()">Criar Conta</a>
-        </div>
-      </form>
+    <div class="Get-out-button">
+      <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Modal.closeRecipe()">
     </div>
+
+    <div id="Recipe-centre-conatainer">
+      <div id="Recipe-Text-container">
+        <div id="name-recipe-container">
+
+        </div>
+        <div id="p-container">
+
+        </div>
+      </div>
+
+      <figure id="Recipe-Image-container">
+        <img src="" alt="" id="Recipe-Image">
+      </figure>
+    </div>
+
+    <div class="text-center article-buttons-container d-inline-flex">
+      <a title="Visualizar" onclick="Modal.openRecipe(1)" class="open-recipe-icons d-inline-block" href="#index0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book"
+          viewBox="0 0 16 16">
+          <path
+            d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+        </svg>
+      </a>
+      <a href="#" class="link-comment d-inline-block" title="Comentar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+          class="bi bi-chat-square" viewBox="0 0 16 16">
+          <path
+            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+        </svg>
+      </a>
+      <a href="#" class="link-like d-inline-block" title="Curtir">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-suit-heart" viewBox="0 0 16 16">
+          <path
+            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+    crossorigin="anonymous"></script>
 
   <script src="./scripts.js"></script>
 
-  <footer>
-    <h5>Marilda's</h5>
-  </footer>
+  <footer></footer>
 </body>
 
 </html>
