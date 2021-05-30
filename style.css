@@ -33,10 +33,6 @@ div#CentreContainer{
     color:  var(--red);
 }
 
-.linkInThatPage{
-    text-decoration: underline;
-}
-
 .sr-only{  /* "sr-only" = screem reader only (somente leitores de tela)*. Esta class foi adicionada aos labels para que pudéssimos manipular seus conteúdos utilizando o trick (truque) abaixo, a fim de torná-los invisíveis para o usuário, porém permitido sua leitura através das ferramentas de acessibilidade (screem readers) */ 
     position: absolute;
     width: 1px;
@@ -49,7 +45,103 @@ div#CentreContainer{
     border-width: 0;
 }
 
-/* Header=====================================================================================================*/
+/* Register Form====================================(Geral)========================================================*/
+div.Register-form-container{
+    display: none;
+}
+
+div.Register-form-container.actived{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: block;
+    position: fixed;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+div.register-form-backgroud.actived{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: black;
+    opacity: 0.7;
+}
+
+div#FormCenterContainer{
+    width: 30%;
+    height: 50%;
+    top: 200px;
+    margin: auto;
+    background: white;
+    position: relative;
+    border-radius: 0.5rem;
+    border: 3px solid var(--dark-red);
+}
+
+div#FormCenterContainer form{
+    text-align: center;
+    position: relative;
+}
+div#FormCenterContainer form div#FormRegisterOutputFileContainer{
+    width: 90px;
+    height: 80px;
+    margin: 1% auto;
+    border: 1px solid var(--dark-red);
+}
+
+div#FormCenterContainer form div#FormRegisterOutputFileContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+div#FormCenterContainer form input#FormRegisterInputFile, div#FormCenterContainer form input#FormRegisterInputName, div#FormCenterContainer form input#FormRegisterInputEmail, div#FormCenterContainer form input#FormRegisterInputPassword{
+    width: 70%;
+    height: 32px;
+    margin: 1% auto;
+    border: 1px solid rgb(196, 192, 192);
+    background-color: white;
+}
+
+div#FormCenterContainer form input#FormRegisterInputFile{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+div#FormCenterContainer form fieldset#ChooseSexo{
+    width: 70%;
+    margin: 2% auto;
+    text-align: center;
+}
+
+div#FormCenterContainer form fieldset#ChooseSexo h6{
+    text-align: left;
+}
+
+div#FormCenterContainer form fieldset#ChooseSexo div.SexoOptionContainer{
+    width: 40%;
+    margin: auto;
+    display: inline-flex;
+    text-align: center;
+}
+
+div#FormCenterContainer form div#FormRegisterInputDateContainer{
+    width: 40%;
+    margin: auto;
+    text-align: left;
+}
+
+div#FormCenterContainer form div#FormRegisterInputDateContainer input#FormRegisterInputDate, div#FormCenterContainer form div#FormRegisterInputDateContainer label{
+    width: 50%;
+    display: inline;
+}
+
+input#FormRegisterInputSubmit{
+    width: 10%;
+    margin-top: 5%;
+}
+
+/* Header================================================================================================================================*/
 header{
     width: 100%;
     height: 50px;
@@ -66,8 +158,10 @@ nav#NavBarContainer{
 header nav#NavBarContainer ul{
     width: 50%;
     height: 50px;
-    margin-left: 25%;
+    margin: 0 auto;
+    align-items: center;
     justify-content: space-between;
+
 }
 
 header nav#NavBarContainer ul li{
@@ -77,7 +171,8 @@ header nav#NavBarContainer ul li{
 
 header nav#NavBarContainer ul li a{
     display: inline-block;
-    margin: 0;
+    margin-top: 8px;
+    padding: 0;
 }
 
 .navlink{
@@ -85,10 +180,25 @@ header nav#NavBarContainer ul li a{
 }
 
 .navlink:hover{
-    color: white;
+    color: rgb(248, 191, 4);
     text-decoration: underline;
 }
 
+a.linkInThatPage{
+    color:gold;
+}
+
+a.subscribe-Link{
+    text-align: center;
+}
+
+a.subscribe-Link h6, a.subscribe-Link svg{
+    display: inline;
+}
+
+a.subscribe-Link svg{
+    padding-bottom: 5px;
+}
 /* Blog Presentation===================================(Home Page)=======================================================*/
 div#BlogPrasentationContainer div#BlogPrasentationImageContainer{
     width: 100%;
@@ -125,34 +235,54 @@ div#BlogPrasentationContainer div#BlogPrasentationSubtitleContainer{
 }
 
 /* Carrosel============================================(Home Page)=======================================================*/
+div#carouselExampleCaptions.hidden{
+    display: none;
+}
+
 div#carouselExampleCaptions{
-    width: 45%;
-    height: 550px;
+    width: 43%;
+    height: 600px;
     margin: 0 auto;
 }
 
 div#carouselExampleCaptions div.carousel-inner{
     width: 100%;
-    height: 550px;
+    height: 600px;
 }
 
 div#carouselExampleCaptions div.carousel-inner img{
     width: 100%;
-    height: 550px;
+    height: 600px;
 }
 
 /* Sections=============================================(Home Page)======================================================*/
-#MarildasPostsContainer{
+section#MarildasPostsContainer.hidden{
+    display: none;
+}
+
+section#MarildasPostsContainer{
     width:45%;
     margin: 30px auto;
     display: block;
 }
 
-#MarildasPostsContainer h6{
+section#MarildasPostsContainer h6#Posth6{
     margin-left: 20px;
 }
 
-section#MarildasPostsContainer div.card-group article.card{
+h6#Posth6.hidden{
+    display: none;
+}
+
+section#MarildasPostsContainer div.PostsPage{
+    display: none;
+}
+
+section#MarildasPostsContainer div.PostsPage.NotHidden{
+    display: block;
+}
+
+section#MarildasPostsContainer div.PostsPage div.card-group article.card{
     height: 560px;
     margin: 20px 20px;
     border: none;
@@ -161,18 +291,18 @@ section#MarildasPostsContainer div.card-group article.card{
     background-color: var(--dark-red);
 }
 
-section#MarildasPostsContainer div.card-group article.card div.marilda-post-image-container{
+section#MarildasPostsContainer div.PostsPage div.card-group article.card div.marilda-post-image-container{
     width: 90%;
     height: 60%;
     margin: 20px auto;
 }
 
-section#MarildasPostsContainer div.card-group article.card div.marilda-post-image-container img{
+section#MarildasPostsContainer div.PostsPage div.card-group article.card div.marilda-post-image-container img{
     width: 100%;
     height: 100%;
 }
 
-section#MarildasPostsContainer div.card-group article.card div.marilda-post-text-container{
+section#MarildasPostsContainer div.PostsPage div.card-group article.card div.marilda-post-text-container{
     width: 100%;
     height: 30%;
 }
@@ -242,8 +372,45 @@ a.link-like:hover{
     color: rgb(255, 8, 0);
 }
 
+a.link-like.liked{
+    text-decoration: none;
+    color: rgb(255, 8, 0);
+
+}
+
 a.link-like.active{
     color: white;
+}
+
+div#PostsPageButtonCotainer.hidden{
+    display: none;
+}
+
+div#PostsPageButtonCotainer{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+div#PostsPageButtonCotainer a{
+    display: inline-block;
+    text-align: left;
+}
+
+div#PostsPageButtonCotainer a div#NextPageContainer h6, div#PostsPageButtonCotainer a div#NextPageContainer svg{
+    display: inline-block;
+    margin: 0;
+}
+
+div#PostsPageButtonCotainer a div#AfterPageContainer{
+    text-align: left;
+    align-items: center;
+}
+
+div#PostsPageButtonCotainer a div#AfterPageContainer h6, div#PostsPageButtonCotainer a div#AfterPageContainer svg{
+    display: inline-flex;
+    margin: 0;
 }
 
 /* Asides================================================(Home Page)=====================================================*/
@@ -382,16 +549,16 @@ div.SpotlightsObject div.SpotlightsObjectTextContainer p{
     -webkit-box-orient: vertical;
 }
 
-
 /*Recipes Visualization===========================(Home Page)=======================================================*/
 .Recipe-container{
-    opacity: 0;
+    display: none;
 }
 
 .Recipe-container.actived{
     width: 100%;
     height: 100%;
     top: 0;
+    display: block;
     position: fixed;
     opacity: 1;
     transition: 0.2s;
@@ -409,12 +576,12 @@ div.SpotlightsObject div.SpotlightsObjectTextContainer p{
 
 #Recipe-centre-conatainer{
     width: 70%;
-    height: 75%;
-    margin-left: 15%;
-    margin-top: 2.5%;
+    height: 80%;
+    top: 60px;
+    margin: auto;
     background: white;
-    display: inline-flex;
-    position: absolute;
+    position: relative;
+    display: flex;
     border-radius: 0.5rem;
     border: 3px solid var(--dark-red);
 
@@ -443,15 +610,16 @@ p#PostIntroduction{
     text-indent: 50pt;
 }
 
-#Recipe-Image-container{
+div.Recipe-container div#Recipe-centre-conatainer figure#Recipe-Image-container{
     width: 50%;
     height: 100%;
 }
 
-img#Recipe-Image{
+div.Recipe-container div#Recipe-centre-conatainer figure#Recipe-Image-container img#Recipe-Image{
+    display: block;
     width: 100%;
     height: 100%;
-    border-radius: 0.25rem;
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .Get-out-button{
@@ -467,6 +635,46 @@ img#Recipe-Image{
     position: absolute;
     background: white;
     border-radius: 3rem;
+}
+
+/* Comments Box====================================(Home Page)=============================================================*/
+div#CommentBox.hidden{
+    display: none;
+}
+
+div#CommentBox{
+    display: block;
+    width: 95%;
+    height: 100%;
+    margin: 1% auto;
+}
+
+div#CommentBox div#CommentedRecipeImg{
+    width: 100%;
+    height: 600px;
+}
+
+div#CommentBox div#CommentedRecipeImg img{
+    width: 100%;
+    height: 100%;
+}
+
+div#CommentedRecipeText{
+    width: 95%;
+    margin: 3% auto;
+    text-align: justify;
+    text-indent: 30pt;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+div#LeaveCommentButtonContainer{
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
 }
 
 /* Sections=====================================(Community Page)===========================================================*/
@@ -521,16 +729,17 @@ div.card-img{
 
 div.card-buttons{
     text-align: center;
+    margin: 0 0 10px 0;
     justify-content: space-between;
 }
 
 a#member-post-comment-button{
-    margin: 0 auto;
+    margin: 0 50px;
 
 }
 
 a#member-post-like-button{
-    margin: 0 auto;
+    margin: 0 50px;
 }
 /* Asides======================================(Community Page)======================================================*/
 aside#MarildasLeftContainerCommunity{
@@ -644,7 +853,7 @@ div#RegisterButtonContainer a{
 
 /* Sections=======================================(Bio Page)=======================================================*/
 section#PostsCommunityBio{
-    width: 45%;
+    width: 40%;
     margin: 5% auto;
 }
 
@@ -653,6 +862,9 @@ section#PostsCommunityBio h4, section#PostsCommunityBio h6{
 }
 
 div#BioTextContainer{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     text-align: justify;
     text-indent: 50pt;
     margin-top: 5%;
@@ -660,19 +872,38 @@ div#BioTextContainer{
 
 /* Asides=========================================(Bio Page)========================================================*/
 aside#LeftBioContainer{
-    width: 27.5%;
+    width: 30%;
     height: 100%;
     position: absolute;
     top: 200px;
 }
 
 div#BioImageContainer{
-    width: 70%;
+    width: 60%;
     height: auto;
     margin: 10% auto; 
 }
 
 div#BioImageContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+aside#RightBioContainer{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 250px;
+    margin-left: 70%;
+}
+
+div.SocialLinkContainerBio{
+    width: 40px;
+    height: 40px;
+    margin: 7% auto;
+}
+
+div.SocialLinkContainerBio img{
     width: 100%;
     height: 100%;
 }

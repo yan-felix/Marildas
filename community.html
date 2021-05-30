@@ -18,12 +18,12 @@
     <nav id="NavBarContainer">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link navlink linkInThatPage" aria-current="page" href="./home.html">
+          <a class="nav-link navlink" aria-current="page" href="./home.html">
             <h6>Home</h6>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navlink" href="./community.html">
+          <a class="nav-link navlink linkInThatPage" href="./community.html">
             <h6>Comunidade</h6>
           </a>
         </li>
@@ -32,7 +32,7 @@
             <h6>Sobre</h6>
           </a>
         </li>
-        <li class="nav-item"  id="SubscribeLink">
+        <li class="nav-item SubscribeLink">
           
         </li>
       </ul>
@@ -55,17 +55,16 @@
     <section id="PostsCommunityContainer">
       <h6>Postagens dos membros:</h6>
 
-      <div class="cardMemberPost">
+      <div class="cardMemberPost" id="MemberPost1">
         <div class="card-header">
           <div class="card-header-img">
-            <img src="./assets/assets/kaneki-logo2.png" alt="">
+            <img src="./assets/assets/logo-marildas.png" alt="">
           </div>
-          <h6>Roberto Baraúna</h6>
+          <h6>Nome do Mebro</h6>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">Título da Postagem</h5>
+          <p class="card-text">Texto da Postagem</p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
         <div class="card-img">
@@ -74,14 +73,63 @@
             class="card-img-bottom" alt="Não foi possível carregar a imagem">
         </div>
         <div class="card-buttons">
-          <a href="#" id="member-post-comment-button" class="link-comment d-inline-block" title="Comentar">
+          <div id="CommentsBoxMemberPost1">
+            <!-- begin wwww.htmlcommentbox.com -->
+            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+            <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24MHJqnkVqKW1EBLSp%2F1sqo1"+"&opts=16862&num=10&ts=1622381867301");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+            <!-- end www.htmlcommentbox.com -->
+          </div>
+          <a href="#" class="member-post-comment-button" class="link-comment d-inline-block" title="Comentar" onclick="doComments('CommentsBoxMemberPost1')">
             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-chat-square"
               viewBox="0 0 16 16">
               <path
                 d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
             </svg>
           </a>
-          <a href="#" id="member-post-like-button" class="link-like d-inline-block" title="Curtir">
+          <a href="#" class="member-post-like-button" class="link-like d-inline-block" title="Curtir">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-suit-heart"
+              viewBox="0 0 16 16">
+              <path
+                d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="cardMemberPost">
+        <div class="card-header">
+          <div class="card-header-img">
+            <img src="./assets/assets/logo-marildas.png" alt="">
+          </div>
+          <h6>Nome do Mebro</h6>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Título da Postagem</h5>
+          <p class="card-text">Texto da Postagem</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        <div class="card-img">
+          <img
+            src="./assets/assets/foto-de-perfil-oficial-temporaria_files/salada-verao.jpg"
+            class="card-img-bottom" alt="Não foi possível carregar a imagem">
+        </div>
+        <div class="card-buttons">
+          <div id="CommentsBoxMemberPost2">
+            <!-- begin wwww.htmlcommentbox.com -->
+            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+            <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24CiTGkwHNPx2Br.kJVKlrw."+"&opts=16862&num=10&ts=1622382782125");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+            <!-- end www.htmlcommentbox.com -->
+          </div>
+          <a href="#" class="member-post-comment-button" class="link-comment d-inline-block" title="Comentar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-chat-square"
+              viewBox="0 0 16 16">
+              <path
+                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+            </svg>
+          </a>
+          <a href="#" class="member-post-like-button" class="link-like d-inline-block" title="Curtir">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-suit-heart"
               viewBox="0 0 16 16">
               <path
@@ -102,12 +150,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -119,12 +167,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -136,12 +184,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -153,12 +201,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -170,12 +218,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -187,12 +235,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -204,12 +252,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -221,12 +269,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -238,12 +286,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -255,12 +303,12 @@
             </div>
             <div class="MemberPostProfileContainer">
               <div class="MemberPostProfileImageContainer">
-                <img src="./assets/assets/Touka-chan_Logo.png" alt="...">
+                <img src="./assets/assets/logo-marildas.png" alt="...">
               </div>
-              <h6>Alexandre Machado de Lins da Silva</h6>
+              <h6>Nome do Membro</h6>
             </div>
             <div class="MemberPostTitleContainer">
-              <h6>Escondidinho de Frango com Queijo</h6>
+              <h6>Nome da Receita</h6>
             </div>
           </div>
         </a>
@@ -273,7 +321,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="./assets/assets/foto-de-perfil-oficial-temporaria_files/58411036_321825501767202_3089821778752888517_n.jpg"
+              src="./assets/assets/Figura1.PNG"
               class="d-block w-100 carouselImg" alt="Ops! Não foi possível carregar a imagem">
           </div>
           <div class="carousel-item">
@@ -290,12 +338,65 @@
       </div>
 
       <div id="RegisterButtonContainer">
-        <a href="#">
+        <a href="#" onclick="Register.openForm()">
           <h6>Solicitar Registro</h6>
         </a>
       </div>
     </aside>
   </main>
+
+  <div class="Register-form-container">
+    <div class="register-form-backgroud">
+    </div>
+
+    <div class="Get-out-button">
+      <img src="./assets/assets/getout-button.png" alt="Saída da Receita" onclick="Register.closeForm()">
+    </div>
+
+    <div id="FormCenterContainer">
+      <form action="" id="register-form">
+        <fieldset>
+            <legend>Cadastro de Membros</legend>
+            <div id="FormRegisterOutputFileContainer">
+              <img id="SelectedImage" src="" alt="">
+            </div>
+
+            <div>
+              <label class="sr-only" for="FormRegisterInputFile">Escolher foto de perfil</label>
+              <input type="file" id="FormRegisterInputFile" placeholder="Foto de Perfil">
+            </div>
+            
+            <div>
+              <label class="sr-only" for="name"> Nome:</label>
+             <input type="text" id="FormRegisterInputName" maxlength="50" placeholder="Nome:">
+            </div>
+
+            <div>
+              <label class="sr-only" for="email">E-mail:</label>
+              <input type="email" id="FormRegisterInputEmail" maxlength="50" placeholder="E-mail:">
+            </div>
+            
+            <div>
+              <label class="sr-only" for="passaword">Sua senha:</label>
+             <input type="password" id="FormRegisterInputPassword" maxlength="10" placeholder="Senha: ">
+            </div>
+
+            <fieldset id="ChooseSexo">
+              <h6>Sexo:</h6>
+              <div class="SexoOptionContainer">
+                <input type="radio" id="FormRegisterInputFeminine" name="sexo" value="F">
+                <label for="feminine">Feminino</label>
+              </div>
+              <div class="SexoOptionContainer">
+                 <input type="radio" id="FormRegisterInputMasculine" name="sexo" value="M">
+                <label for="masculine">Masculino</label>
+              </div>
+            </fieldset>
+        </fieldset>
+        <input type="submit" value="Enviar" id="FormRegisterInputSubmit" onclick="Register.submitAndCloseForm()">
+     </form>
+    </div>
+  </div>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
@@ -310,7 +411,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
     crossorigin="anonymous"></script>
+
   <script src="./scripts.js"></script>
+
+  <script src="./scripts.php"></script>
 
   <footer></footer>
 </body>
