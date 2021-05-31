@@ -678,6 +678,10 @@ div#LeaveCommentButtonContainer{
 }
 
 /* Sections=====================================(Community Page)===========================================================*/
+section#PostsCommunityContainer.hidden{
+    display: none;
+}
+
 section#PostsCommunityContainer{
     width: 45%;
     height: 100%;
@@ -705,7 +709,7 @@ div.card-header{
 }
 
 div.card-header-img{
-    width: 10%;
+    width: 55px;
     height: 100%;
     display: inline-block;
 }
@@ -715,8 +719,13 @@ div.card-header-img img{
     height: 100%;
 }
 
-div.card-header h6{
+div.card-header h5{
     display: inline-block;
+}
+
+h4.card-title{
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 div.card-body p{
@@ -724,23 +733,110 @@ div.card-body p{
 }
 
 div.card-img{
+    width: 100%;
+    height: 500px;
     padding: 2%;
+}
+
+div.card-img img{
+    width: 100%;
+    height: 100%;
 }
 
 div.card-buttons{
     text-align: center;
     margin: 0 0 10px 0;
+    padding-bottom: 10px;
     justify-content: space-between;
 }
 
 a#member-post-comment-button{
     margin: 0 50px;
-
+    display: block;
 }
 
 a#member-post-like-button{
     margin: 0 50px;
+    display: block;
 }
+
+a.hidden{
+    display: none;
+}
+
+a.LinkMemberPost{
+    color: white;
+    text-decoration: none;
+    text-align: justify;
+}
+
+div#CommentsBoxMemberPost.hidden{
+    display: none;
+}
+
+div#CommentsBoxMemberPost{
+    width: 35%;
+    margin: 3% auto;
+}
+
+div#UserCommentedPostProfile{
+    margin-bottom: 3%;
+}
+
+div#PhotoMemberContainer{
+    width: 60px;
+    height: 60px;
+}
+
+div#PhotoMemberContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+
+div#PhotoMemberContainer, h4#NameMemberContainer{
+    display: inline-block;
+}
+
+div#CommentedMemberPostImgContainer{
+    width: 100%;
+    height: 550px;
+}
+
+div#CommentedMemberPostImgContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+div#LikeMemberPostContainer{
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+}
+
+div#LikeMemberPostContainer a#LikeMemberPostIndex0{
+    color: var(--dark-red);
+    margin-left: 90%;
+}
+
+div#LikeMemberPostContainer a#LikeMemberPostIndex0.liked{
+    color: red;
+}
+
+h2#CommentedMemberPostName{
+    text-align: center;
+    margin: 2% 0;
+}
+
+p#MemberPsotPresentation{
+    text-align: justify;
+    text-indent: 30pt;
+}
+
+div#CommentedMemberPostTextCotainer{
+    text-align: justify;
+}
+
 /* Asides======================================(Community Page)======================================================*/
 aside#MarildasLeftContainerCommunity{
     width: 27.5%;
@@ -773,11 +869,12 @@ div.MemberSpotlightObject{
 div.MemberPostProfileContainer{
     width: 80%;
     height: 50%;
+    margin: 0 auto;
     display: inline-flex;
 }
 
 div.MemberPostProfileImageContainer{
-    width: 20%;
+    width: 40px;
     height: 40px;
 }
 
@@ -789,7 +886,7 @@ div.MemberPostProfileImageContainer img{
 div.MemberPostProfileContainer h6{
     width: 70%;
     height: 40px;
-    text-align: center;
+    text-align: left;
     padding: 10px 5px;
     white-space: nowrap;
     overflow: hidden;
@@ -805,10 +902,11 @@ div.MemberPostTitleContainer{
     display: inline-block;
 }
 
-div.MemberPostTitleContainer h5{
-    width: 100%;
+div.MemberPostTitleContainer h6{
+    width: 80%;
     height: 100%;
-    text-align: center;
+    margin: 0 auto;
+    text-align: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
