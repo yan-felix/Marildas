@@ -1040,7 +1040,6 @@ const Subscription = {
                 email: email,
                 situation: 'subscribed',
             }
-            console.log(SubscriberDatas);
     
             Storege.set(SubscriberDatas);
     
@@ -1060,77 +1059,5 @@ const Subscription = {
     },
 }
 
-const Config = { //Rever (provavelmente será removido)
-    openConfig(){
-        let profileDiv = document.querySelector("#Profile-container");
-        profileDiv.parentElement.removeChild(profileDiv);
-
-        let configDiv = document.createElement('div');
-        configDiv.setAttribute("id","Config-options-container");
-        configDiv.innerHTML = `
-            <div id="Close-Config-options-container">
-                <img src="./assets/assets/throw-error-button.png" alt="Fechar Configrações" onclick="Config.closeConfig()">
-            </div>
-            <div id="Change-Password-container">
-                <h6><a class="linkes">Mudar Senha</a></h6>
-            </div>
-  
-            <div id="Change-Photo-container">
-                <h6><a class="linkes">Mudar Foto de Perfil</a></h6>
-            </div>
-  
-            <div id="Unfollow-container" onclick="Config.Unfollow()">
-                <h6><a class="linkes" onclick="Config.Unfollow()">Desinscrever-se</a></h6>
-            </div>
-        `;
-        document.querySelector("#Header-Buttons-Container").appendChild(configDiv);
-    },
-
-    closeConfig(){
-        let configOptionsDiv = document.querySelector("#Config-options-container");
-        configOptionsDiv.parentNode.removeChild(configOptionsDiv);
-
-        let profileDiv = document.createElement('div');
-        profileDiv.setAttribute("id", "Profile-container");
-        profileDiv.innerHTML = `
-                <div id="Config-container">
-                    <img src="./assets/assets/engrenagem-verde.png" alt="Configurações do perfil" onclick="Config.openConfig()" title="Configurações de perfil">
-                </div>
-                <div id="Profile-Photo-container">
-                    <img src="./assets/assets/iconem-perfil.png" alt="Sua foto de perfil" title="Foto de perfil">
-                </div>
-        `;
-
-        document.querySelector("#Header-Buttons-Container").appendChild(profileDiv);
-    },
-
-    Unfollow(){
-        let account = Storege.get();
-        account.userCod = "";
-        account.name = "";
-        account.password = "";
-        account.nPosts = "";
-        Storege.set(account);
-        
-        let configOptionsDiv = document.querySelector("#Config-options-container");
-        document.querySelector("#Header-Buttons-Container").removeChild(configOptionsDiv);
-        
-        let subscribeButton = document.createElement('div');
-        subscribeButton.setAttribute("id", "subscribe-button-container");
-        subscribeButton.innerHTML = `<a class="linkes" href="#" onclick="Modal.openSubscribeForm()">Inscrever-se</a>`
-        
-        document.querySelector("#Header-Buttons-Container").appendChild(subscribeButton);
-
-        
-    },
-}
-
-const AccountDatas = { //Este bloco será o responsável por pegar os dados das contas dos suários do Local Storege para que possam ser usados para os mais dferentes fins.
-    getAccountName(){
-        const account = Storege.get();
-        const accountName = account.name;
-        return accountName
-    }
-}
 
 App.inIt();
